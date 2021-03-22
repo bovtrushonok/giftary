@@ -1,0 +1,19 @@
+{
+  "name": "giftary",
+  "version": "1.0.0",
+  "description": "clone of giftary app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bovtrushonok/giftary.git"
+  },
+  "author": "Marie Bovtramovich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bovtrushonok/giftary/issues"
+  },
+  "homepage": "https://github.com/bovtrushonok/giftary#readme"
+}
