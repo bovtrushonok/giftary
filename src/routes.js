@@ -1,5 +1,5 @@
 import ProfilePage from "./pages/profile";
-import AuthorizationPage from "./pages/auth";
+import AuthorizationPage from "./pages/auth/authPage";
 import EventListPage from "./pages/eventList";
 import FriendsList from "./pages/friendsList";
 import MainPage from "./pages/mainPage";
@@ -16,7 +16,6 @@ const useRoutes = (isAuthenticated) => {
       </div>
     )
   }
-
   return (
     <div>
       <AuthorizationPage />
