@@ -1,5 +1,4 @@
 import useRoutes from './routes';
-import 'materialize-css';
 import styled from 'styled-components';
 
 const AppWrapper = styled.div`

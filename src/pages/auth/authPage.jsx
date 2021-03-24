@@ -3,7 +3,7 @@ const { default: AuthForm } = require("./authForm")
 const AuthorizationPage = () => {
   return (
     <div>
-      <span>Authorization page</span>
+      <span>A</span>
       <AuthForm />
     </div>
   )
