@@ -29,6 +29,9 @@ const Input = styled.input`
   max-width: 300px;
   border: none;
   border-bottom: 1px solid #004d40;
+  color: #1A237E;
+  font-family: Tahoma, sans-serif;
+  font-size: 1.1em;
   &:focus {
     outline: none;
     border-bottom: 3px solid #1A237E;
@@ -42,6 +45,8 @@ const Button = styled.button`
   color: #EDE7F6;
   border: none;
   text-transform: capitalize;
+  font-family: Tahoma, sans-serif;
+  font-size: 1.1em;
   &:active,
   &:focus {
     outline: #4a148c 0.5px solid;
