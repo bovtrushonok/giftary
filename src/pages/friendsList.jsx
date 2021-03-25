@@ -1,8 +1,17 @@
+import Header from "../partials/header";
+import BottomNav from '../partials/bottomNav';
+import { Wrapper } from "../partials/wrapper";
+import { Content } from "../partials/content";
+
 const FriendsList = () => {
   return (
-    <div>
-      <h1>Friends list</h1>
-    </div>
+    <Wrapper>
+      <Content>
+        <Header />
+        <div> </div>
+      </Content>
+      <BottomNav />
+    </Wrapper>
   )
 }
 

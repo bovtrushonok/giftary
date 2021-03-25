@@ -15,6 +15,9 @@ const MenuWrapper = styled.div`
   @media screen and (max-width: 500px) {
     display: none;
   }
+  @media screen and (min-width: 700px) {
+    width: 50%;
+  }
 `;
 
 const linkStyle = {

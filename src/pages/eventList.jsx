@@ -1,8 +1,17 @@
+import Header from "../partials/header";
+import BottomNav from '../partials/bottomNav';
+import { Wrapper } from "../partials/wrapper";
+import { Content } from "../partials/content";
+
 const EventListPage = () => {
   return (
-    <div>
-      <span>Event list page</span>
-    </div>
+    <Wrapper>
+      <Content>
+        <Header />
+        <div> </div>
+      </Content>
+      <BottomNav />
+    </Wrapper>
   )
 }
 
