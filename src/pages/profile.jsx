@@ -3,6 +3,8 @@ import Header from "../partials/header";
 import BottomNav from '../partials/bottomNav';
 import { Wrapper } from "../partials/wrapper";
 import { Content } from "../partials/content";
+import List from "../partials/list";
+import { ListItem, GiftListItem }  from "../partials/listItem";
 import SwitchComponent from "../partials/switcher";
 import AddBoxRoundedIcon from '@material-ui/icons/AddBoxRounded';
 
@@ -52,6 +54,17 @@ const ProfilePage = () => {
       <Content>
         <Header />
         <SwitchComponent />
+        <List> 
+          <ListItem> 
+            <GiftListItem>
+              <div>
+                <span>First gift</span>
+                <span>Link</span>
+                <span>Description</span>
+              </div>
+            </GiftListItem>
+          </ListItem>
+        </List>
         <IconWrapper>
           <AddBoxRoundedIcon />
           <span>Add gifts to your wish list</span>

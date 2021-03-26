@@ -16,8 +16,8 @@ const Switch = styled.label`
   }
 
   @media screen and (max-width: 510px) {
-    margin: 30px;
-    width: 95%;
+    margin: 30px 0;
+    width: 100%;
   }
 
   @media screen and (min-width: 950px) {
