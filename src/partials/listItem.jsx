@@ -57,7 +57,7 @@ const EventListItem = styled(ListItem)`
   div {
     width: 100%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
   }
@@ -65,6 +65,16 @@ const EventListItem = styled(ListItem)`
   span {
     font-size: 1.2em;
     color: #212121;
+    width: 50%;
+  }
+
+  div + p {
+    display: flex;
+    align-self: flex-start;
+    font-size: 0.9em;
+    color: #616161;
+    padding: 0;
+    margin: 0;
   }
 
   div > div {

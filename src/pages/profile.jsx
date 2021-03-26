@@ -71,7 +71,7 @@ const ProfilePage = () => {
           <FriendGiftListItem>
             <div>
               <div>
-                <span>First gift</span>
+                <span>First friend's gift</span>
                 <span>Link</span>
                 <span>Description</span>
               </div>
@@ -81,6 +81,7 @@ const ProfilePage = () => {
           <EventListItem>
             <div>
               <span>First event</span>
+              
               <div>
                 <span> 26 </span>
                 <span> March </span>
