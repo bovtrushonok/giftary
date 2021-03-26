@@ -4,7 +4,7 @@ import BottomNav from '../partials/bottomNav';
 import { Wrapper } from "../partials/wrapper";
 import { Content } from "../partials/content";
 import List from "../partials/list";
-import { ListItem, GiftListItem }  from "../partials/listItem";
+import { GiftListItem, EventListItem }  from "../partials/listItem";
 import SwitchComponent from "../partials/switcher";
 import AddBoxRoundedIcon from '@material-ui/icons/AddBoxRounded';
 
@@ -55,7 +55,7 @@ const ProfilePage = () => {
         <Header />
         <SwitchComponent />
         <List> 
-          <ListItem> 
+    
             <GiftListItem>
               <div>
                 <span>First gift</span>
@@ -63,7 +63,17 @@ const ProfilePage = () => {
                 <span>Description</span>
               </div>
             </GiftListItem>
-          </ListItem>
+
+            <EventListItem>
+              <div>
+                <span>First event</span>
+                <div>
+                  <span> 26 </span>
+                  <span> March </span>
+                </div>
+              </div>
+            </EventListItem>
+
         </List>
         <IconWrapper>
           <AddBoxRoundedIcon />
