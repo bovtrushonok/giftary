@@ -1,6 +1,6 @@
 import ProfilePage from "./pages/profile";
 import AuthorizationPage from "./pages/auth/authPage";
-import EventListPage from "./pages/eventList";
+import EventListPage from "./pages/eventsList";
 import FriendsList from "./pages/friendsList";
 import MainPage from "./pages/mainPage";
 const { Route } = require("react-router-dom")
