@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const List = styled.section`
-  width: 65%;
+  width: 95%;
   margin: 10px auto;
   padding: 5px 7px;
   display: flex;
@@ -15,7 +15,7 @@ const List = styled.section`
   }
 
   @media screen and (min-width: 950px) {
-    width: 65%;
+    width: 75%;
   }
 `;
 

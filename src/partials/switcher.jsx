@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Switch = styled.label`
   position: relative;
-  width: 65%;
+  width: 95%;
   height: 94px;
   margin: 15px auto;
   display: flex;
@@ -21,7 +21,7 @@ const Switch = styled.label`
   }
 
   @media screen and (min-width: 950px) {
-    width: 65%;
+    width: 75%;
   }
 `;
 

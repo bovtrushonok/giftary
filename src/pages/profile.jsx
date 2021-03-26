@@ -16,7 +16,7 @@ const IconWrapper = styled.div `
   width: 25%;
   position: fixed;
   bottom: 100px;
-  right: 20%;
+  right: 10%;
 
   @media screen and (max-width: 500px) {
     width: 65%;
@@ -24,6 +24,10 @@ const IconWrapper = styled.div `
 
   @media screen and (max-width: 700px) {
     width: 50%;
+  }
+
+  @media screen and (min-width: 950px) {
+    right: 19%;
   }
 
   span {
@@ -55,38 +59,34 @@ const ProfilePage = () => {
         <Header />
         <SwitchComponent />
         <List> 
-    
-            <GiftListItem>
+          <GiftListItem>
+            <div>
               <div>
-                <div>
-                  <span>First gift</span>
-                  <span>Link</span>
-                  <span>Description</span>
-                </div>
+                <span>First gift</span>
+                <span>Link</span>
+                <span>Description</span>
               </div>
-            </GiftListItem>
-
-            <FriendGiftListItem>
+            </div>
+          </GiftListItem>
+          <FriendGiftListItem>
+            <div>
               <div>
-                <div>
-                  <span>First gift</span>
-                  <span>Link</span>
-                  <span>Description</span>
-                </div>
-                <input type="checkbox"/>
+                <span>First gift</span>
+                <span>Link</span>
+                <span>Description</span>
               </div>
-            </FriendGiftListItem>
-
-            <EventListItem>
+              <input type="checkbox" />
+            </div>
+          </FriendGiftListItem>
+          <EventListItem>
+            <div>
+              <span>First event</span>
               <div>
-                <span>First event</span>
-                <div>
-                  <span> 26 </span>
-                  <span> March </span>
-                </div>
+                <span> 26 </span>
+                <span> March </span>
               </div>
-            </EventListItem>
-
+            </div>
+          </EventListItem>
         </List>
         <IconWrapper>
           <AddBoxRoundedIcon />
