@@ -1,24 +1,11 @@
-import styled from 'styled-components';
 import Header from "../partials/header";
 import BottomNav from '../partials/bottomNav';
 import { Wrapper } from "../partials/wrapper";
 import { Content } from "../partials/content";
 import { EventListItem }  from "../partials/listItem";
 import List from "../partials/list";
-import { FriendInfo, Avatar } from "./eventsList";
-
-export const PageIntroduction = styled.section`
-  width: 95%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-content: space-between;
-  margin: 10px 5px;
-  span {
-    display: block;
-    width: 100%;
-  }
-`;
+import { FriendInfo, Avatar } from "../partials/friendInfo";
+import { PageIntroduction } from '../partials/pageIntroduction';
 
 const FriendsList = () => {
   return (
