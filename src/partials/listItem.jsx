@@ -14,6 +14,14 @@ const ListItem = styled.div`
 
 const GiftListItem = styled(ListItem)`
   div {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-items: space-between;
+  }
+
+  div > div {
     display: flex;
     flex-flow: column wrap;
     align-items: flex-start;
@@ -36,6 +44,15 @@ const GiftListItem = styled(ListItem)`
   }
 `;
 
+const FriendGiftListItem = styled(GiftListItem)`
+  input {
+    display: flex;
+    justify-self: flex-end;
+    width: 10%;
+    height: 1.5em;
+  }
+`;
+
 const EventListItem = styled(ListItem)`
   div {
     width: 100%;
@@ -53,14 +70,13 @@ const EventListItem = styled(ListItem)`
   div > div {
     display: flex;
     flex-flow: column wrap;
-    align-content: flex-end;
-    justify-content: flex-end;
     justify-self: flex-end;
+    align-items: flex-end;
+    width: 50%;
   }
 
   div > div > span {
     font-size: 1.3em;
-    align-self: center;
     color: #d32f2f;
   }
 
@@ -70,4 +86,4 @@ const EventListItem = styled(ListItem)`
   }
 `;
 
-export { ListItem, GiftListItem, EventListItem } ;
+export { ListItem, GiftListItem, EventListItem, FriendGiftListItem } ;

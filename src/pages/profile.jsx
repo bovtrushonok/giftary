@@ -4,7 +4,7 @@ import BottomNav from '../partials/bottomNav';
 import { Wrapper } from "../partials/wrapper";
 import { Content } from "../partials/content";
 import List from "../partials/list";
-import { GiftListItem, EventListItem }  from "../partials/listItem";
+import { GiftListItem, EventListItem, FriendGiftListItem}  from "../partials/listItem";
 import SwitchComponent from "../partials/switcher";
 import AddBoxRoundedIcon from '@material-ui/icons/AddBoxRounded';
 
@@ -58,11 +58,24 @@ const ProfilePage = () => {
     
             <GiftListItem>
               <div>
-                <span>First gift</span>
-                <span>Link</span>
-                <span>Description</span>
+                <div>
+                  <span>First gift</span>
+                  <span>Link</span>
+                  <span>Description</span>
+                </div>
               </div>
             </GiftListItem>
+
+            <FriendGiftListItem>
+              <div>
+                <div>
+                  <span>First gift</span>
+                  <span>Link</span>
+                  <span>Description</span>
+                </div>
+                <input type="checkbox"/>
+              </div>
+            </FriendGiftListItem>
 
             <EventListItem>
               <div>
