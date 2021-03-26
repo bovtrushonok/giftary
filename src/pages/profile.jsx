@@ -38,7 +38,7 @@ const IconWrapper = styled.div `
 
   svg {
     font-size: 4em;
-    color: #1a237e;
+    color: #6200ea;
     display: flex;
     align-self: flex-end;
   }
