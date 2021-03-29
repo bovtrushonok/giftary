@@ -10,7 +10,7 @@ const Modal = styled.section`
   flex-flow: row wrap;
   align-content: flex-start;
   justify-content: center;
-  background: linear-gradient(180deg, rgba(208,131,206,1) 0%, rgba(194,128,210,1) 23%, rgba(236,231,236,1) 100%);
+  background: linear-gradient(180deg, ${color.topBcModalGradient}, ${color.middleBcModalGradient}, ${color.bottomBcModalGradient});
   position: absolute;
   bottom: 0;
   left: 0;
@@ -53,12 +53,4 @@ const TextArea = styled.textarea`
   background-color: ${color.primaryBc};
 `;
 
-const Overlay = styled.div`
-  width: 99vw;
-  height: 99vh;
-  background-color: ${color.overlayColor};
-  position: absolute;
-  z-index: 1;
-`;
-
-export { Modal, Button, TextInput, TextArea, Overlay };
+export { Modal, Button, TextInput, TextArea };

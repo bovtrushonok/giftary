@@ -1,4 +1,4 @@
-const { default: AuthForm } = require("./authForm")
+import { AuthForm } from './authForm';
 
 const AuthorizationPage = () => {
   return (
