@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import * as color from '../constants/colors';
 
 
 const MenuWrapper = styled.div`
@@ -11,7 +12,7 @@ const MenuWrapper = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  color: #fce4ec;
+  color: ${color.lightAccentText};
   @media screen and (max-width: 500px) {
     display: none;
   }
@@ -22,12 +23,12 @@ const MenuWrapper = styled.div`
 
 const linkStyle = {
   textDecoration: "none",
-  color: "#fce4ec",
+  color: `${color.lightAccentText}`,
 }
 
 const linkActiveStyle = {
   fontWeight: "bold",
-  color: "#ffccbc",
+  color: `${color.lightAccentLink}`,
 }
 
 const Header = () => {

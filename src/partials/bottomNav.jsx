@@ -3,6 +3,7 @@ import ContactsRoundedIcon from '@material-ui/icons/ContactsRounded';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import * as color from '../constants/colors';
 
 const NavWrapper = styled.div`
   display: none;  
@@ -21,12 +22,12 @@ const NavWrapper = styled.div`
 
 const linkStyle = {
   textDecoration: "none",
-  color: "#757575",
+  color: `${color.primaryIcon}`,
 }
 
 const linkActiveStyle = {
   fontWeight: "bold",
-  color: "#424242",
+  color: `${color.secondaryText}`,
 }
 
 export default function BottomNav() {

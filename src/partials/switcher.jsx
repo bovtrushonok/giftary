@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as color from '../constants/colors';
 
 const Switch = styled.label`
   position: relative;
@@ -12,7 +13,7 @@ const Switch = styled.label`
   span {
     padding: 0 7px;
     margin: 0 auto;
-    color: #424242;
+    color: ${color.secondaryText};
   }
 
   @media screen and (max-width: 510px) {
@@ -31,7 +32,7 @@ const Input = styled.input`
   height: 0;
 
   &:focus + span {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px ${color.mainShadows};
   }
 
   &:checked + span:before {
@@ -46,7 +47,7 @@ const Slider = styled.span`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: ${color.overlayColor};
   transition: .4s;
   border-radius: 34px;
   z-index: -1;
@@ -58,7 +59,7 @@ const Slider = styled.span`
     left: 4px;
     bottom: 4px;
     border-radius: 34px;
-    background-color: white;
+    background-color: ${color.white};
     transition: .4s;
   }
 `;

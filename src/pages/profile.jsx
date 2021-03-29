@@ -7,6 +7,7 @@ import List from "../partials/list";
 import { GiftListItem, EventListItem, FriendGiftListItem}  from "../partials/listItem";
 import SwitchComponent from "../partials/switcher";
 import AddBoxRoundedIcon from '@material-ui/icons/AddBoxRounded';
+import * as color from '../constants/colors';
 
 const IconWrapper = styled.div `
   display: flex;
@@ -33,17 +34,17 @@ const IconWrapper = styled.div `
   span {
     display: none;
     font-style: italic;
-    color: #1a237e;
+    color: ${color.primaryText};
   }
 
   svg {
     font-size: 4em;
-    color: #6200ea;
+    color: ${color.secondaryIcon};
     display: flex;
     align-self: flex-end;
   }
   svg:hover {
-    color: #3949ab;
+    color: ${color.secondaryDIcon};
     cursor: pointer;
   }
 

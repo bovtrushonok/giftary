@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as color from '../constants/colors';
 
 const Modal = styled.section`
   width: 95vw;
@@ -25,11 +26,11 @@ const Button = styled.button`
   font-size: 1.3em;
   border: none;
   background-color: transparent;
-  color: #212121;
+  color: ${color.secondaryDText};
 
   &:hover {
     cursor: pointer;
-    color: #1a237e;
+    color: ${color.primaryText};
   }
 `;
 
@@ -40,7 +41,7 @@ const TextInput = styled.input`
   margin: 7px auto;
   padding: 10px 7px;
   border-radius: 10px;
-  background-color: #e8eaf6;
+  background-color: ${color.primaryBc};
 `;
 
 const TextArea = styled.textarea`
@@ -49,13 +50,13 @@ const TextArea = styled.textarea`
   margin: 7px auto;
   padding: 10px 7px;
   border-radius: 10px;
-  background-color: #e8eaf6;
+  background-color: ${color.primaryBc};
 `;
 
 const Overlay = styled.div`
   width: 99vw;
   height: 99vh;
-  background-color: #e0e0e0;
+  background-color: ${color.overlayColor};
   position: absolute;
   z-index: 1;
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as color from '../constants/colors';
 
 const ListItem = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ const ListItem = styled.div`
   margin: 7px auto;
   padding: 10px 7px;
   border-radius: 10px;
-  background-color: #e8eaf6;
+  background-color: ${color.primaryBc};
 `;
 
 const GiftListItem = styled(ListItem)`
@@ -30,17 +31,17 @@ const GiftListItem = styled(ListItem)`
   
   span {
     font-size: 1.2em;
-    color: #212121;
+    color: ${color.secondaryDText};
   }
 
   span + span {
     font-size: 0.9em;
-    color: #616161;
+    color: ${color.secondaryLText};
   }
 
   span:last-child {
     font-size: 1em;
-    color: #424242;
+    color: ${color.secondaryText};
   }
 `;
 
@@ -64,7 +65,7 @@ const EventListItem = styled(ListItem)`
 
   span {
     font-size: 1.2em;
-    color: #212121;
+    color: ${color.secondaryDText};
     width: 50%;
   }
 
@@ -72,7 +73,7 @@ const EventListItem = styled(ListItem)`
     display: flex;
     align-self: flex-start;
     font-size: 0.9em;
-    color: #616161;
+    color: ${color.secondaryLText};
     padding: 0;
     margin: 0;
   }
@@ -87,12 +88,12 @@ const EventListItem = styled(ListItem)`
 
   div > div > span {
     font-size: 1.3em;
-    color: #d32f2f;
+    color: ${color.accentRedText};
   }
 
   div > div > span + span {
     font-size: 0.9em;
-    color: #d32f2f;
+    color: ${color.accentRedText};
   }
 `;
 
