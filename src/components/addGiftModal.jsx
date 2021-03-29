@@ -5,6 +5,7 @@ export const AddGiftModal = () => {
     <>
       <Modal>
         <TextInput> </TextInput>
+        <TextInput> </TextInput>
         <TextArea> </TextArea>
         <Button></Button>
       </Modal>

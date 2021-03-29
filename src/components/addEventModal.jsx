@@ -1,4 +1,4 @@
-import { Modal, Button, TextInput, TextArea } from '../sharedViews/modals';
+import { Modal, Button, TextInput } from '../sharedViews/modals';
 
 export const AddEventModal = () => {
   return (

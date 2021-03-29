@@ -3,9 +3,9 @@ import AuthorizationPage from "./pages/auth/authPage";
 import EventListPage from "./pages/eventsList";
 import FriendsList from "./pages/friendsList";
 import MainPage from "./pages/mainPage";
-const { Route } = require("react-router-dom")
+import { Route } from 'react-router-dom';
 
-const useRoutes = (isAuthenticated) => {
+export const useRoutes = (isAuthenticated) => {
   if(isAuthenticated) {
     return (
       <div>
@@ -22,5 +22,3 @@ const useRoutes = (isAuthenticated) => {
     </div>
   )
 }
-
-export default useRoutes;

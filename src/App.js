@@ -1,4 +1,4 @@
-import useRoutes from './routes';
+import { useRoutes } from './routes';
 
 const App = () => {
   const routes = useRoutes(true);
