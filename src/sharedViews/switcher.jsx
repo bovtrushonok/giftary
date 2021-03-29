@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import * as color from '../constants/colors';
+import * as size from '../constants/mediaQueries';
 
-const Switch = styled.label`
+export const Switch = styled.label`
   position: relative;
   width: 95%;
   height: 94px;
@@ -16,17 +17,17 @@ const Switch = styled.label`
     color: ${color.secondaryText};
   }
 
-  @media screen and (max-width: 510px) {
+  @media screen and (max-width: ${size.smallScreen}) {
     margin: 30px 0;
     width: 100%;
   }
 
-  @media screen and (min-width: 950px) {
+  @media screen and (min-width: ${size.mediumScreen}) {
     width: 75%;
   }
 `;
 
-const Input = styled.input`
+export const Input = styled.input`
   opacity: 0;
   width: 0;
   height: 0;
@@ -40,7 +41,7 @@ const Input = styled.input`
   }
 `;
 
-const Slider = styled.span`
+export const Slider = styled.span`
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -63,16 +64,3 @@ const Slider = styled.span`
     transition: .4s;
   }
 `;
-
-const SwitchComponent = () => {
-  return (
-    <Switch>
-      <span>My gifts &#127873;</span>
-      <span>My events &#127881;</span>
-      <Input type="checkbox"/>
-      <Slider/>
-  </Switch>
-  )
-}
-
-export default SwitchComponent;

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import Header from "../partials/header";
-import BottomNav from '../partials/bottomNav';
-import { Wrapper } from "../partials/wrapper";
-import { Content } from "../partials/content";
-import List from "../partials/list";
-import { GiftListItem, EventListItem, FriendGiftListItem}  from "../partials/listItem";
-import SwitchComponent from "../partials/switcher";
+import { Header } from "../components/header";
+import { BottomNav } from '../components/bottomNav';
+import { Wrapper } from "../sharedViews/wrapper";
+import { Content } from "../sharedViews/contentWrap";
+import { List } from "../sharedViews/list";
+import { GiftListItem, EventListItem, FriendGiftListItem}  from "../sharedViews/listItem";
+import { SwitchComponent } from "../components/switcher";
 import AddBoxRoundedIcon from '@material-ui/icons/AddBoxRounded';
 import * as color from '../constants/colors';
 
@@ -15,21 +15,8 @@ const IconWrapper = styled.div `
   justify-items: flex-start;
   align-items: flex-end;
   width: 25%;
-  position: fixed;
-  bottom: 100px;
-  right: 10%;
-
-  @media screen and (max-width: 500px) {
-    width: 65%;
-  }
-
-  @media screen and (max-width: 700px) {
-    width: 50%;
-  }
-
-  @media screen and (min-width: 950px) {
-    right: 19%;
-  }
+  align-self: flex-end;
+  justify-self: flex-end;
 
   span {
     display: none;
@@ -44,7 +31,7 @@ const IconWrapper = styled.div `
     align-self: flex-end;
   }
   svg:hover {
-    color: ${color.secondaryDIcon};
+    color: ${color.secondaryDarkenIcon};
     cursor: pointer;
   }
 

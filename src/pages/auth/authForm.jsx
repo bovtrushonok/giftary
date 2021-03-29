@@ -60,7 +60,7 @@ const ButtonLogIn = styled(Button)`
 `;
 
 const ButtonSignUp = styled(Button)`
-  background-color: ${color.secondaryLBc};  
+  background-color: ${color.secondaryLightBc};  
 `;
 
 const Form = () => {
@@ -79,17 +79,16 @@ const Form = () => {
           <ButtonSignUp>SignUp</ButtonSignUp>
         </ButtonBlock>
       </>
-
   )
 }
 
 const AuthForm = () => {
   return (
-    <div>
+    <>
       <Wrapper>
         <Form />
       </Wrapper>
-    </div>
+    </>
   )
 }
 

@@ -61,4 +61,4 @@ const Overlay = styled.div`
   z-index: 1;
 `;
 
-export { Modal, Button, TextInput, TextArea, Overlay }
+export { Modal, Button, TextInput, TextArea, Overlay };

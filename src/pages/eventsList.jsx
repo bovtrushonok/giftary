@@ -1,11 +1,12 @@
-import Header from "../partials/header";
-import BottomNav from '../partials/bottomNav';
-import { Wrapper } from "../partials/wrapper";
-import { Content } from "../partials/content";
-import { PageIntroduction } from '../partials/pageIntroduction';
-import List from "../partials/list";
-import { EventListItem }  from "../partials/listItem";
-import { FriendInfo, Avatar } from "../partials/friendInfo";
+import { Header } from "../components/header";
+import { BottomNav } from '../components/bottomNav';
+import {  Avatar } from "../components/avatar";
+import { Wrapper } from "../sharedViews/wrapper";
+import { FriendInfo, Content } from "../sharedViews/contentWrap";
+import { PageIntroduction } from '../sharedViews/pageIntroduction';
+import { List } from "../sharedViews/list";
+import { EventListItem }  from "../sharedViews/listItem";
+
 
 const EventListPage = () => {
   return (

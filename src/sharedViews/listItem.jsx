@@ -97,4 +97,4 @@ const EventListItem = styled(ListItem)`
   }
 `;
 
-export { ListItem, GiftListItem, EventListItem, FriendGiftListItem } ;
+export { ListItem, GiftListItem, EventListItem, FriendGiftListItem };
