@@ -1,4 +1,4 @@
-import { Modal } from '../sharedViews/modals';
+import { Modal } from '../sharedViews/modal';
 import { Button } from '../sharedViews/button';
 import { Input } from '../sharedViews/input';
 
