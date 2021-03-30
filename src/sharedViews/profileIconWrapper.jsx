@@ -17,7 +17,7 @@ export const IconWrapper = styled.div `
   }
 
   svg {
-    font-size: 4em;
+    font-size: 62px;
     color: ${color.secondaryIcon};
     display: flex;
     align-self: flex-end;

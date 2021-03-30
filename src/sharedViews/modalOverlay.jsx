@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import * as color from '../constants/colors';
 
 export const Overlay = styled.div`
-  width: 99vw;
-  height: 99vh;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
   background-color: ${color.overlayColor};
   position: absolute;
   z-index: 1;

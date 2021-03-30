@@ -1,10 +1,8 @@
-import { AuthForm } from './authForm';
+import { LogInForm } from './authForm';
 
 const AuthorizationPage = () => {
   return (
-    <>
-      <AuthForm />
-    </>
+    <LogInForm />
   )
 }
 

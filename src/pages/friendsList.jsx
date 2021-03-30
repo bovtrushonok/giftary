@@ -1,11 +1,12 @@
 import { Header } from "../components/header";
 import { BottomNav } from '../components/bottomNav';
+import { Avatar } from "../components/avatar";
 import { Wrapper } from "../sharedViews/wrapper";
 import { FriendInfo, Content } from "../sharedViews/contentWrap";
 import { EventListItem }  from "../sharedViews/listItem";
 import { List } from "../sharedViews/list";
-import { Avatar } from "../components/avatar";
 import { PageIntroduction } from '../sharedViews/pageIntroduction';
+
 
 const FriendsList = () => {
   return (

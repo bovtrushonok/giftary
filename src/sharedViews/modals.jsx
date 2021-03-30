@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import * as color from '../constants/colors';
+import * as size from '../constants/mediaQueries';
 
-const Modal = styled.section`
-  width: 95vw;
+export const Modal = styled.section`
+  width: 55%;
   height: 90vh;
   margin: 20px auto;
-  padding: 5px 7px;
+  padding: 15px 7px;
+  box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;
@@ -13,44 +15,18 @@ const Modal = styled.section`
   background: linear-gradient(180deg, ${color.topBcModalGradient}, ${color.middleBcModalGradient}, ${color.bottomBcModalGradient});
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 27%;
   z-index: 2;
   border-radius: 14px;
-`;
+  
+  @media screen and (max-width: ${size.smallScreen}) {
+    margin: 30px 0;
+    width: 95%;
+    left: 2.4%;
+  }
 
-const Button = styled.button`
-  position: fixed;
-  bottom: 10px;
-  margin: 5px auto 0;
-  padding: 5px 7px;
-  font-size: 1.3em;
-  border: none;
-  background-color: transparent;
-  color: ${color.secondaryDText};
-
-  &:hover {
-    cursor: pointer;
-    color: ${color.primaryText};
+  @media screen and (min-width: ${size.mediumScreen}) {
+    width: 75%;
+    left: 12%;
   }
 `;
-
-const TextInput = styled.input`
-  display: flex;
-  width: 100%;
-  max-height: 50px;
-  margin: 7px auto;
-  padding: 10px 7px;
-  border-radius: 10px;
-  background-color: ${color.primaryBc};
-`;
-
-const TextArea = styled.textarea`
-  display: flex;
-  width: 100%;
-  margin: 7px auto;
-  padding: 10px 7px;
-  border-radius: 10px;
-  background-color: ${color.primaryBc};
-`;
-
-export { Modal, Button, TextInput, TextArea };

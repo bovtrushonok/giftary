@@ -1,7 +1,17 @@
+import { BottomNav } from "../components/bottomNav"
+import { Header } from "../components/header"
+import { Content } from "../sharedViews/contentWrap"
+import { Wrapper } from "../sharedViews/wrapper"
+
 const MainPage = () => {
   return (
     <>
-      <h1>Main page</h1>
+      <Wrapper>
+        <Content>
+          <Header />
+          <BottomNav />
+        </Content>
+      </Wrapper>
     </>
   )
 }

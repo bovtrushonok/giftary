@@ -30,17 +30,17 @@ const GiftListItem = styled(ListItem)`
   }
   
   span {
-    font-size: 1.2em;
+    font-size: 17px;
     color: ${color.secondaryDText};
   }
 
   span + span {
-    font-size: 0.9em;
+    font-size: 13px;
     color: ${color.secondaryLText};
   }
 
   span:last-child {
-    font-size: 1em;
+    font-size: 15px;
     color: ${color.secondaryText};
   }
 `;
@@ -50,7 +50,7 @@ const FriendGiftListItem = styled(GiftListItem)`
     display: flex;
     justify-self: flex-end;
     width: 10%;
-    height: 1.5em;
+    height: 20px;
   }
 `;
 
@@ -64,7 +64,7 @@ const EventListItem = styled(ListItem)`
   }
 
   span {
-    font-size: 1.2em;
+    font-size: 19px;
     color: ${color.secondaryDText};
     width: 50%;
   }
@@ -72,7 +72,7 @@ const EventListItem = styled(ListItem)`
   div + p {
     display: flex;
     align-self: flex-start;
-    font-size: 0.9em;
+    font-size: 15px;
     color: ${color.secondaryLText};
     padding: 0;
     margin: 0;
@@ -87,12 +87,12 @@ const EventListItem = styled(ListItem)`
   }
 
   div > div > span {
-    font-size: 1.3em;
+    font-size: 17px;
     color: ${color.accentRedText};
   }
 
   div > div > span + span {
-    font-size: 0.9em;
+    font-size: 15px;
     color: ${color.accentRedText};
   }
 `;

@@ -1,4 +1,7 @@
-import { InputBlock, ButtonBlock, Input, ButtonLogIn, ButtonSignUp } from '../sharedViews/form';
+import * as color from '../constants/colors';
+import { InputBlock, ButtonBlock } from '../sharedViews/form';
+import { Input } from '../sharedViews/input';
+import { Button } from '../sharedViews/button';
 
 export const Form = () => {
   return (
@@ -12,8 +15,8 @@ export const Form = () => {
           <label htmlFor="password"/>
         </InputBlock>
         <ButtonBlock>
-          <ButtonLogIn>LogIn</ButtonLogIn>
-          <ButtonSignUp>SignUp</ButtonSignUp>
+          <Button bcColor={color.secondaryBc}> LogIn </Button>
+          <Button bcColor={color.secondaryLightBc}> SignUp </Button>
         </ButtonBlock>
       </>
   )
