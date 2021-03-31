@@ -1,6 +1,6 @@
-export const primaryBc : string = '#e8eaf6'; //indigo lighten-5 background background background
+export const primaryBc : string = '#e8eaf6'; // indigo lighten-5 background background background
 export const primaryText : string = '#1A237E'; // indigo darken-4  text text border color text
-export const lightText : string = '#ede7f6'; //deep-purple lighten-5 text
+export const lightText : string = '#ede7f6'; // deep-purple lighten-5 text
 export const mainShadows : string = '#4a148c'; // purple darken-4 outline shadow
 export const secondaryBc : string = '#9575cd'; // deep-purple lighten-2 background
 export const secondaryLightBc : string = '#ba68c8'; // purple lighten-2 background
@@ -14,7 +14,7 @@ export const lightAccentLink : string = '#ffccbc'; // deep-orange lighten-4 text
 export const secondaryDText : string = '#212121'; // grey darken-4 text
 export const secondaryLText : string = '#616161'; // grey darken-2 text
 export const accentRedText : string = '#d32f2f'; // red darken-2 textImportant
-export const overlayColor : string = '#e0e0e0'; //grey lighten-2 overlay
+export const overlayColor : string = '#e0e0e0'; // grey lighten-2 overlay
 export const white : string = '#ffffff';
 export const topBcModalGradient : string = 'rgba(208,131,206,1) 0%';
 export const middleBcModalGradient : string = 'rgba(208,131,206,1) 0%';

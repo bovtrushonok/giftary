@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as color from '../constants/colors';
+import * as color from '../constants/colors.ts';
 
 export const TextArea = styled.textarea`
   display: flex;

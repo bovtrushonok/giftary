@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import * as color from '../constants/colors';
-import * as size from '../constants/mediaQueries';
+import styled from 'styled-components';
+import * as color from '../constants/colors.ts';
+import * as size from '../constants/mediaQueries.ts';
 
 export const MenuWrapper = styled.div`
   width: 80%;
@@ -21,11 +21,11 @@ export const MenuWrapper = styled.div`
 `;
 
 export const linkStyle = {
-  textDecoration: "none",
+  textDecoration: 'none',
   color: `${color.lightAccentText}`,
-}
+};
 
 export const linkActiveStyle = {
-  fontWeight: "bold",
+  fontWeight: 'bold',
   color: `${color.lightAccentLink}`,
-}
+};

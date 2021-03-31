@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import * as color from '../constants/colors';
+import styled from 'styled-components';
+import * as color from '../constants/colors.ts';
 
 export const Button = styled.button`
   width: 40%;
@@ -10,7 +10,7 @@ export const Button = styled.button`
   text-transform: capitalize;
   font-family: Tahoma, sans-serif;
   font-size: 1.1em;
-  background-color: ${props => props.bcColor || 'transparent'};
+  background-color: ${(props) => props.bcColor || 'transparent'};
   &:active,
   &:focus {
     outline: ${color.mainShadows} 0.5px solid;

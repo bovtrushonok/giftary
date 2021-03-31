@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import * as color from '../constants/colors';
-import * as size from '../constants/mediaQueries';
+import * as color from '../constants/colors.ts';
+import * as size from '../constants/mediaQueries.ts';
 
 export const NavWrapper = styled.div`
   display: none;  
@@ -18,11 +18,11 @@ export const NavWrapper = styled.div`
 `;
 
 export const linkStyle = {
-  textDecoration: "none",
+  textDecoration: 'none',
   color: `${color.primaryIcon}`,
-}
+};
 
 export const linkActiveStyle = {
-  fontWeight: "bold",
+  fontWeight: 'bold',
   color: `${color.secondaryText}`,
-}
+};

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import * as color from '../constants/colors';
+import * as color from '../constants/colors.ts';
 
-export const IconWrapper = styled.div `
+export const IconWrapper = styled.div`
   display: flex;
   flex-flow: column wrap;
   justify-items: flex-start;

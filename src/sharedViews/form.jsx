@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import * as color from '../constants/colors';
+import styled from 'styled-components';
+import * as color from '../constants/colors.ts';
 
 export const FormWrapper = styled.section`
   width: 40%;

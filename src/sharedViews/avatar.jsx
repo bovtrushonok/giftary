@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as color from '../constants/colors';
+import * as color from '../constants/colors.ts';
 
 export const AvatarWrapper = styled.div`
   display: flex;
@@ -10,4 +10,3 @@ export const AvatarWrapper = styled.div`
   border-radius: 14px;
   margin-right: -5px;
 `;
-

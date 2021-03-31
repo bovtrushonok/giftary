@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import * as color from '../constants/colors';
-import * as size from '../constants/mediaQueries';
+import * as color from '../constants/colors.ts';
+import * as size from '../constants/mediaQueries.ts';
 
 export const Switch = styled.label`
   position: relative;
@@ -15,6 +15,7 @@ export const Switch = styled.label`
     padding: 0 7px;
     margin: 0 auto;
     color: ${color.secondaryText};
+    z-index: 2;
   }
 
   input:checked + span:before {

@@ -1,10 +1,8 @@
 import { Form } from '../../components/form';
 import { FormWrapper } from '../../sharedViews/form';
 
-export const LogInForm = () => {
-  return (
-    <FormWrapper>
-      <Form />
-    </FormWrapper>
-  )
-}
+export const LogInForm = () => (
+  <FormWrapper>
+    <Form />
+  </FormWrapper>
+);

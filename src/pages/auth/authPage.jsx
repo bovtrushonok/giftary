@@ -1,9 +1,7 @@
 import { LogInForm } from './authForm';
 
-const AuthorizationPage = () => {
-  return (
-    <LogInForm />
-  )
-}
+const AuthorizationPage = () => (
+  <LogInForm />
+);
 
 export default AuthorizationPage;

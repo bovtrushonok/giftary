@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as color from '../constants/colors';
+import * as color from '../constants/colors.ts';
 
 const ListItem = styled.div`
   display: flex;
@@ -97,4 +97,6 @@ const EventListItem = styled(ListItem)`
   }
 `;
 
-export { ListItem, GiftListItem, EventListItem, FriendGiftListItem };
+export {
+  ListItem, GiftListItem, EventListItem, FriendGiftListItem,
+};

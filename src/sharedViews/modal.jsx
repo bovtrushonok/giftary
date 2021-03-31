@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import * as color from '../constants/colors';
-import * as size from '../constants/mediaQueries';
+import * as color from '../constants/colors.ts';
+import * as size from '../constants/mediaQueries.ts';
 
 export const Modal = styled.section`
   width: 55%;

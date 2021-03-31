@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as size from '../constants/mediaQueries';
+import * as size from '../constants/mediaQueries.ts';
 
 export const List = styled.section`
   width: 95%;

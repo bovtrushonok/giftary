@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as color from '../constants/colors';
+import * as color from '../constants/colors.ts';
 
 export const Slider = styled.span`
   position: absolute;
@@ -11,7 +11,7 @@ export const Slider = styled.span`
   background-color: ${color.overlayColor};
   transition: .4s;
   border-radius: 34px;
-  z-index: -1;
+ 
   &:before {
     position: absolute;
     content: "";
