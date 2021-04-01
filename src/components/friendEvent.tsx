@@ -14,12 +14,8 @@ export const FriendEvent: React.FC<Props> = ({
   <EventListItem>
     <span>{friendName}</span>
     <DateBlock>
-      <p>
-        {eventDay}
-      </p>
-      <p>
-        {eventMonth}
-      </p>
+      <p>{eventDay}</p>
+      <p>{eventMonth}</p>
     </DateBlock>
     <p>{eventName}</p>
   </EventListItem>

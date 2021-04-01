@@ -55,7 +55,7 @@ const DateBlock = styled.div`
   flex-flow: column wrap;
   justify-self: flex-end;
   align-content: flex-end;
-  width: 50%;
+  width: 40%;
 
   p {
     font-size: 17px;
@@ -76,7 +76,6 @@ const EventListItem = styled(ListItem)`
   span {
     font-size: 19px;
     color: ${color.secondaryDarkenText};
-    width: 50%;
   }
 
   div + p {

@@ -11,12 +11,8 @@ export const MyEvent: React.FC<Props> = ({ eventName, eventDay, eventMonth } : P
   <EventListItem>
     <span>{eventName}</span>
     <DateBlock>
-      <p>
-        {eventDay}
-      </p>
-      <p>
-        {eventMonth}
-      </p>
+      <p>{eventDay}</p>
+      <p>{eventMonth}</p>
     </DateBlock>
   </EventListItem>
 );
