@@ -5,6 +5,9 @@
     },
     "extends": [
         "plugin:react/recommended",
+        "plugin:import/typescript",
+        "plugin:import/errors",
+        "plugin:import/warnings",
         "airbnb"
     ],
     "parser": "@typescript-eslint/parser",
@@ -28,6 +31,6 @@
         "jsx-a11y/label-has-associated-control": "off",
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
-        "import/extensions": "never"
+        "import/no-unresolved": 0
     }
 }

@@ -1,6 +1,11 @@
 import React from 'react';
 import { FriendGiftListItem, GiftWrapper } from '../sharedViews/listItem';
-import { Props } from './myGift';
+
+interface Props {
+  giftName: string,
+  giftLink: string,
+  giftDescription: string,
+}
 
 export const FriendsGift: React.FC<Props> = ({ giftName, giftLink, giftDescription } : Props) => (
   <FriendGiftListItem>

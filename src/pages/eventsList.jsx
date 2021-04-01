@@ -1,11 +1,11 @@
 import { Header } from '../components/header';
 import { BottomNav } from '../components/bottomNav';
 import { Avatar } from '../components/avatar';
+import { FriendEvent } from '../components/friendEvent.tsx';
 import { Wrapper } from '../sharedViews/wrapper';
 import { FriendInfo, Content } from '../sharedViews/contentWrap';
 import { PageIntroduction } from '../sharedViews/pageIntroduction';
 import { List } from '../sharedViews/list';
-import { DateBlock, EventListItem } from '../sharedViews/listItem';
 
 const EventListPage = () => (
   <Wrapper>
@@ -17,16 +17,7 @@ const EventListPage = () => (
       <List>
         <FriendInfo>
           <Avatar />
-          <EventListItem>
-            <>
-              <span>Friend&apos;s Name</span>
-              <DateBlock>
-                <p> 26 </p>
-                <p> March </p>
-              </DateBlock>
-              <p>Event type</p>
-            </>
-          </EventListItem>
+          <FriendEvent friendName="Good friend" eventName="First event" eventDay="26" eventMonth="March" />
         </FriendInfo>
       </List>
     </Content>
