@@ -4,9 +4,9 @@ const App = () => {
   const routes = useRoutes(true);
   return (
     <>
-      {routes}
+      { routes }
     </>
   );
-}
+};
 
 export default App;

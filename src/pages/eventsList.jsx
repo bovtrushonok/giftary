@@ -5,7 +5,7 @@ import { Wrapper } from '../sharedViews/wrapper';
 import { FriendInfo, Content } from '../sharedViews/contentWrap';
 import { PageIntroduction } from '../sharedViews/pageIntroduction';
 import { List } from '../sharedViews/list';
-import { EventListItem } from '../sharedViews/listItem';
+import { DateBlock, EventListItem } from '../sharedViews/listItem';
 
 const EventListPage = () => (
   <Wrapper>
@@ -18,14 +18,14 @@ const EventListPage = () => (
         <FriendInfo>
           <Avatar />
           <EventListItem>
-            <div>
+            <>
               <span>Friend&apos;s Name</span>
-              <div>
-                <span> 26 </span>
-                <span> March </span>
-              </div>
+              <DateBlock>
+                <p> 26 </p>
+                <p> March </p>
+              </DateBlock>
               <p>Event type</p>
-            </div>
+            </>
           </EventListItem>
         </FriendInfo>
       </List>

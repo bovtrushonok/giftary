@@ -4,7 +4,8 @@ import * as color from '../constants/colors.ts';
 const ListItem = styled.div`
   display: flex;
   flex-flow: row nowrap;
-  justify-items: space-between;
+  justify-content: space-between;
+  align-content: center;
   align-items: center;
   width: 100%;
   margin: 7px auto;
@@ -13,30 +14,20 @@ const ListItem = styled.div`
   background-color: ${color.primaryBc};
 `;
 
-const GiftListItem = styled(ListItem)`
-  div {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-items: space-between;
-  }
-
-  div > div {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
-    justify-items: space-around;
-  }
+const GiftWrapper = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  justify-items: space-around;
   
   span {
     font-size: 17px;
-    color: ${color.secondaryDText};
+    color: ${color.secondaryDarkenText};
   }
 
   span + span {
     font-size: 13px;
-    color: ${color.secondaryLText};
+    color: ${color.secondaryLightText};
   }
 
   span:last-child {
@@ -45,7 +36,12 @@ const GiftListItem = styled(ListItem)`
   }
 `;
 
+const GiftListItem = styled(ListItem)`
+`;
+
 const FriendGiftListItem = styled(GiftListItem)`
+  justify-content: space-between;
+  
   input {
     display: flex;
     justify-self: flex-end;
@@ -54,49 +50,45 @@ const FriendGiftListItem = styled(GiftListItem)`
   }
 `;
 
-const EventListItem = styled(ListItem)`
-  div {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
+const DateBlock = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  justify-self: flex-end;
+  align-content: flex-end;
+  width: 50%;
 
-  span {
-    font-size: 19px;
-    color: ${color.secondaryDText};
-    width: 50%;
-  }
-
-  div + p {
-    display: flex;
-    align-self: flex-start;
-    font-size: 15px;
-    color: ${color.secondaryLText};
-    padding: 0;
-    margin: 0;
-  }
-
-  div > div {
-    display: flex;
-    flex-flow: column wrap;
-    justify-self: flex-end;
-    align-items: flex-end;
-    width: 50%;
-  }
-
-  div > div > span {
+  p {
     font-size: 17px;
     color: ${color.accentRedText};
+    margin: 0;
+    padding: 0;
   }
 
-  div > div > span + span {
+  p + p {
     font-size: 15px;
     color: ${color.accentRedText};
   }
 `;
 
+const EventListItem = styled(ListItem)`
+  flex-flow: row wrap;
+
+  span {
+    font-size: 19px;
+    color: ${color.secondaryDarkenText};
+    width: 50%;
+  }
+
+  div + p {
+    display: flex;
+    justify-self: flex-start;
+    font-size: 15px;
+    color: ${color.secondaryLightText};
+    padding: 0;
+    margin: 0;
+  }
+`;
+
 export {
-  ListItem, GiftListItem, EventListItem, FriendGiftListItem,
+  ListItem, GiftListItem, GiftWrapper, EventListItem, DateBlock, FriendGiftListItem,
 };
