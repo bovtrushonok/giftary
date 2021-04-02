@@ -3,18 +3,20 @@ import {
   GiftListItem, GiftWrapper,
 } from '../sharedViews/listItem';
 
-export interface Props {
-  giftName: string,
-  giftLink: string,
-  giftDescription: string,
+export interface giftProps {
+  giftName: string;
+  giftLink: string;
+  giftDescription: string;
+  key: string;
 }
 
-export const MyGift : React.FC<Props> = ({ giftName, giftLink, giftDescription } : Props) => (
-  <GiftListItem>
-    <GiftWrapper>
-      <span>{giftName}</span>
-      <span>{giftLink}</span>
-      <span>{giftDescription}</span>
-    </GiftWrapper>
-  </GiftListItem>
+export const MyGift : React.FC<giftProps> = ({ giftName, giftLink, giftDescription }
+  : giftProps) => (
+    <GiftListItem>
+      <GiftWrapper>
+        <span>{giftName}</span>
+        <span>{giftLink}</span>
+        <span>{giftDescription}</span>
+      </GiftWrapper>
+    </GiftListItem>
 );
