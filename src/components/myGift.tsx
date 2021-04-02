@@ -1,14 +1,8 @@
 import React from 'react';
+import { giftProps } from '../types/interfaces';
 import {
   GiftListItem, GiftWrapper,
 } from '../sharedViews/listItem';
-
-export interface giftProps {
-  giftName: string;
-  giftLink: string;
-  giftDescription: string;
-  key: string;
-}
 
 export const MyGift : React.FC<giftProps> = ({ giftName, giftLink, giftDescription }
   : giftProps) => (

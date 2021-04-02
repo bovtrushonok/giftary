@@ -55,6 +55,7 @@ const DateBlock = styled.div`
   flex-flow: column wrap;
   justify-self: flex-end;
   align-content: flex-end;
+  justify-content: center;
   width: 40%;
 
   p {

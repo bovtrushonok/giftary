@@ -15,3 +15,18 @@ export const eventsData = [
     eventName: 'Second event', eventDay: '26', eventMonth: 'April', id: '1',
   },
 ];
+
+export const friendsData = [
+  { friendName: 'good friend', friendAvatar: '🐞', id: '0' },
+  { friendName: 'another good friend', friendAvatar: '🐞', id: '1' },
+];
+
+export const friendsEventsList = [
+  {
+    friendName: 'good friend', friendAvatar: '🐞', eventName: 'First event', eventDay: '26', eventMonth: 'March', id: '0',
+  },
+
+  {
+    friendName: 'another friend', friendAvatar: '🐞', eventName: 'second event', eventDay: '26', eventMonth: 'April', id: '1',
+  },
+];

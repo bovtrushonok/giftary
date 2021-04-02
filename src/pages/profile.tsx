@@ -1,19 +1,15 @@
 import React from 'react';
 import AddBoxRoundedIcon from '@material-ui/icons/AddBoxRounded';
+import { profileProps } from '../types/interfaces';
 import { Header } from '../components/header';
 import { BottomNav } from '../components/bottomNav';
 import { SwitchComponent } from '../components/switcher';
-import { MyEvent, eventProps } from '../components/myEvent.tsx';
-import { MyGift, giftProps } from '../components/myGift.tsx';
+import { MyEvent } from '../components/myEvent';
+import { MyGift } from '../components/myGift';
 import { Wrapper } from '../sharedViews/wrapper';
 import { Content } from '../sharedViews/contentWrap';
 import { List } from '../sharedViews/list';
 import { IconWrapper } from '../sharedViews/profileIconWrapper';
-
-interface profileProps {
-  events: Array<eventProps>;
-  gifts: Array<giftProps>;
-}
 
 const ProfilePage: React.FC<profileProps> = ({ events, gifts } : profileProps) => {
   const giftItems = gifts.map((g) => (
@@ -21,7 +17,7 @@ const ProfilePage: React.FC<profileProps> = ({ events, gifts } : profileProps) =
       giftName={g.giftName}
       giftLink={g.giftLink}
       giftDescription={g.giftDescription}
-      key={g.id}
+      id={g.id}
     />
   ));
 

@@ -1,14 +1,11 @@
 import React from 'react';
 import { FriendGiftListItem, GiftWrapper } from '../sharedViews/listItem';
 import { Input } from '../sharedViews/input';
+import { iFriendGiftProps } from '../types/interfaces';
 
-interface Props {
-  giftName: string,
-  giftLink: string,
-  giftDescription: string,
-}
-
-export const FriendsGift: React.FC<Props> = ({ giftName, giftLink, giftDescription } : Props) => (
+export const FriendsGift: React.FC<iFriendGiftProps> = ({
+  giftName, giftLink, giftDescription,
+} : iFriendGiftProps) => (
   <FriendGiftListItem>
     <GiftWrapper>
       <span>{giftName}</span>

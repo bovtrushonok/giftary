@@ -8,5 +8,5 @@ export const AvatarWrapper = styled.div`
   padding: 0 5px;
   background-color: ${color.secondaryLightLightBc};
   border-radius: 14px;
-  margin-right: -5px;
+  margin: 5px -5px 5px 0;
 `;
