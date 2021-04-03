@@ -6,7 +6,7 @@ import EventListPage from './pages/eventsList';
 import FriendsList from './pages/friendsList';
 import MainPage from './pages/mainPage';
 import {
-  eventsData, friendsData, friendsEventsList, giftsData,
+  state,
 } from './data';
 
 export const useRoutes = (isAuthenticated) => {
@@ -18,8 +18,10 @@ export const useRoutes = (isAuthenticated) => {
           path={path.profilePath}
           render={() => (
             <ProfilePage
-              gifts={giftsData}
-              events={eventsData}
+              gifts={state.profilePage.giftsData}
+              events={state.profilePage.eventsData}
+              mode={state.profilePage.mode}
+              addMode={state.profilePage.addMode}
             />
           )}
         />
@@ -28,8 +30,10 @@ export const useRoutes = (isAuthenticated) => {
           exact
           render={() => (
             <ProfilePage
-              gifts={giftsData}
-              events={eventsData}
+              gifts={state.profilePage.giftsData}
+              events={state.profilePage.eventsData}
+              mode={state.profilePage.mode}
+              addMode={state.profilePage.addMode}
             />
           )}
         />
@@ -37,11 +41,18 @@ export const useRoutes = (isAuthenticated) => {
           path={path.eventsPagePath}
           render={() => (
             <EventListPage
-              friendEvents={friendsEventsList}
+              friendEvents={state.eventsPage.friendsEventsList}
             />
           )}
         />
-        <Route path={path.friendsPagePath} render={() => <FriendsList friends={friendsData} />} />
+        <Route
+          path={path.friendsPagePath}
+          render={() => (
+            <FriendsList
+              friends={state.friendsPage.friendsData}
+            />
+          )}
+        />
       </>
     );
   }

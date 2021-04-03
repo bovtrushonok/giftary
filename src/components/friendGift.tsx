@@ -3,7 +3,7 @@ import { FriendGiftListItem, GiftWrapper } from '../sharedViews/listItem';
 import { Input } from '../sharedViews/input';
 import { iFriendGiftProps } from '../types/interfaces';
 
-export const FriendsGift: React.FC<iFriendGiftProps> = ({
+export const FriendGift: React.FC<iFriendGiftProps> = ({
   giftName, giftLink, giftDescription,
 } : iFriendGiftProps) => (
   <FriendGiftListItem>

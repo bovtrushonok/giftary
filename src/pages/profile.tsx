@@ -6,12 +6,16 @@ import { BottomNav } from '../components/bottomNav';
 import { SwitchComponent } from '../components/switcher';
 import { MyEvent } from '../components/myEvent';
 import { MyGift } from '../components/myGift';
+import { AddGiftModal } from '../components/addGiftModal';
 import { Wrapper } from '../sharedViews/wrapper';
 import { Content } from '../sharedViews/contentWrap';
 import { List } from '../sharedViews/list';
 import { IconWrapper } from '../sharedViews/profileIconWrapper';
+import { AddEventModal } from '../components/addEventModal';
 
-const ProfilePage: React.FC<profileProps> = ({ events, gifts } : profileProps) => {
+const ProfilePage: React.FC<profileProps> = ({
+  events, gifts, mode, addMode,
+} : profileProps) => {
   const giftItems = gifts.map((g) => (
     <MyGift
       giftName={g.giftName}
@@ -31,21 +35,27 @@ const ProfilePage: React.FC<profileProps> = ({ events, gifts } : profileProps) =
   ));
 
   return (
-    <Wrapper>
-      <Content>
-        <Header />
-        <SwitchComponent />
-        <List>
-          {giftItems}
-          {eventItems}
-        </List>
-        <IconWrapper>
-          <AddBoxRoundedIcon />
-          <span>Add gifts to your wish list</span>
-        </IconWrapper>
-      </Content>
-      <BottomNav />
-    </Wrapper>
+    <>
+      {addMode === 'true' && mode === 'onGift' && <AddGiftModal />}
+      {addMode === 'true' && mode === 'onEvent' && <AddEventModal />}
+      {addMode === 'false' && (
+      <Wrapper>
+        <Content>
+          <Header />
+          <SwitchComponent />
+          <List>
+            {mode === 'onGift' && giftItems}
+            {mode === 'onEvent' && eventItems}
+          </List>
+          <IconWrapper>
+            <AddBoxRoundedIcon />
+            <span>Add gifts to your wish list</span>
+          </IconWrapper>
+        </Content>
+        <BottomNav />
+      </Wrapper>
+      )}
+    </>
   );
 };
 

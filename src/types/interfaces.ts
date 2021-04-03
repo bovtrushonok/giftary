@@ -48,4 +48,6 @@ export interface iFriendsListProps {
 export interface profileProps {
   events: Array<eventProps>;
   gifts: Array<giftProps>;
+  mode: string;
+  addMode: string;
 }
