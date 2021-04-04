@@ -1,3 +1,5 @@
+/*
+
 import { Route } from 'react-router-dom';
 import * as path from './constants/routePaths.ts';
 import ProfilePage from './pages/profile.tsx';
@@ -5,9 +7,7 @@ import AuthorizationPage from './pages/auth/authPage';
 import EventListPage from './pages/eventsList';
 import FriendsList from './pages/friendsList';
 import MainPage from './pages/mainPage';
-import {
-  state,
-} from './data';
+import { state } from './redux/data';
 
 export const useRoutes = (isAuthenticated) => {
   if (isAuthenticated) {
@@ -60,3 +60,4 @@ export const useRoutes = (isAuthenticated) => {
     <AuthorizationPage />
   );
 };
+*/

@@ -50,4 +50,15 @@ export interface profileProps {
   gifts: Array<giftProps>;
   mode: string;
   addMode: string;
+  dispatch: object;
+}
+
+export interface iState {
+  profilePage: profileProps;
+  friendsPage: iFriendsListProps;
+  eventsPage: iFriendEventList;
+}
+
+export interface iModalProps {
+  dispatch: any;
 }

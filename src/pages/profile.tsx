@@ -14,7 +14,7 @@ import { IconWrapper } from '../sharedViews/profileIconWrapper';
 import { AddEventModal } from '../components/addEventModal';
 
 const ProfilePage: React.FC<profileProps> = ({
-  events, gifts, mode, addMode,
+  events, gifts, mode, addMode, dispatch,
 } : profileProps) => {
   const giftItems = gifts.map((g) => (
     <MyGift
@@ -36,8 +36,8 @@ const ProfilePage: React.FC<profileProps> = ({
 
   return (
     <>
-      {addMode === 'true' && mode === 'onGift' && <AddGiftModal />}
-      {addMode === 'true' && mode === 'onEvent' && <AddEventModal />}
+      {addMode === 'true' && mode === 'onGift' && <AddGiftModal dispatch={dispatch} />}
+      {addMode === 'true' && mode === 'onEvent' && <AddEventModal dispatch={dispatch} />}
       {addMode === 'false' && (
       <Wrapper>
         <Content>

@@ -13,40 +13,28 @@ export const BottomNav = () => (
       style={linkStyle}
       activeStyle={linkActiveStyle}
     >
-      {' '}
       <HomeIcon />
-      {' '}
-
     </NavLink>
     <NavLink
       to={path.profilePath}
       style={linkStyle}
       activeStyle={linkActiveStyle}
     >
-      {' '}
       <FavoriteIcon />
-      {' '}
-
     </NavLink>
     <NavLink
       to={path.eventsPagePath}
       style={linkStyle}
       activeStyle={linkActiveStyle}
     >
-      {' '}
       <EventRoundedIcon />
-      {' '}
-
     </NavLink>
     <NavLink
       to={path.friendsPagePath}
       style={linkStyle}
       activeStyle={linkActiveStyle}
     >
-      {' '}
       <ContactsRoundedIcon />
-      {' '}
-
     </NavLink>
   </NavWrapper>
 );
