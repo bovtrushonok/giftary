@@ -1,17 +1,12 @@
 import React from 'react';
 import AddBoxRoundedIcon from '@material-ui/icons/AddBoxRounded';
 import { profileProps } from '../types/interfaces';
-import { Header } from '../components/header';
-import { BottomNav } from '../components/bottomNav';
-import { SwitchComponent } from '../components/switcher';
-import { MyEvent } from '../components/myEvent';
-import { MyGift } from '../components/myGift';
-import { AddGiftModal } from '../components/addGiftModal';
-import { Wrapper } from '../sharedViews/wrapper';
-import { Content } from '../sharedViews/contentWrap';
-import { List } from '../sharedViews/list';
-import { IconWrapper } from '../sharedViews/profileIconWrapper';
-import { AddEventModal } from '../components/addEventModal';
+import {
+  Header, BottomNav, SwitchComponent, MyEvent, MyGift, AddEventModal, AddGiftModal,
+} from '../components/index';
+import {
+  Wrapper, Content, List, IconWrapper,
+} from '../sharedViews/index';
 
 const ProfilePage: React.FC<profileProps> = ({
   events, gifts, mode, addMode, dispatch,

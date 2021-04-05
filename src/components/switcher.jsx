@@ -1,6 +1,4 @@
-import { Switch } from '../sharedViews/switch';
-import { Slider } from '../sharedViews/slider';
-import { Input } from '../sharedViews/input';
+import { Switch, Slider, Input } from '../sharedViews/index';
 
 export const SwitchComponent = () => (
   <Switch>

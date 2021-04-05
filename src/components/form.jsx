@@ -1,7 +1,7 @@
 import * as color from '../constants/colors.ts';
-import { InputBlock, ButtonBlock } from '../sharedViews/form';
-import { Input } from '../sharedViews/input';
-import { Button } from '../sharedViews/button';
+import {
+  InputBlock, ButtonBlock, Input, Button,
+} from '../sharedViews/index';
 
 export const Form = () => (
   <>

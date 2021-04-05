@@ -1,12 +1,9 @@
 import React from 'react';
 import { iFriendsListProps } from '../types/interfaces';
-import { Header } from '../components/header';
-import { BottomNav } from '../components/bottomNav';
-import { FriendLabel } from '../components/friendLabel';
-import { Wrapper } from '../sharedViews/wrapper';
-import { Content } from '../sharedViews/contentWrap';
-import { List } from '../sharedViews/list';
-import { PageIntroduction } from '../sharedViews/pageIntroduction';
+import { Header, BottomNav, FriendLabel } from '../components/index';
+import {
+  Wrapper, Content, List, PageIntroduction,
+} from '../sharedViews/index';
 
 const FriendsList: React.FC<iFriendsListProps> = ({ friends } : iFriendsListProps) => {
   const friendItems = friends.map((f) => (

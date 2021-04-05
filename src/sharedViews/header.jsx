@@ -20,12 +20,12 @@ export const MenuWrapper = styled.div`
   }
 `;
 
-export const linkStyle = {
+export const linkStyleObj = {
   textDecoration: 'none',
   color: `${color.lightAccentText}`,
 };
 
-export const linkActiveStyle = {
+export const linkActiveStyleObj = {
   fontWeight: 'bold',
   color: `${color.lightAccentLink}`,
 };

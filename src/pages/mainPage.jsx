@@ -1,7 +1,5 @@
-import { BottomNav } from '../components/bottomNav';
-import { Header } from '../components/header';
-import { Content } from '../sharedViews/contentWrap';
-import { Wrapper } from '../sharedViews/wrapper';
+import { BottomNav, Header } from '../components/index';
+import { Content, Wrapper } from '../sharedViews/index';
 
 const MainPage = () => (
   <Wrapper>
