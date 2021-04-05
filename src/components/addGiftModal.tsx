@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import { iModalProps } from '../types/interfaces';
 import { addGiftActionCreator } from '../redux/profilePageReducers';
 import {
@@ -6,16 +6,24 @@ import {
 } from '../sharedViews/index';
 
 export const AddGiftModal: React.FC<iModalProps> = ({ dispatch }: any) => {
-  const giftNameInput: any = React.createRef();
-  const giftLinkInput: any = React.createRef();
-  const giftDescriptionTextarea: any = React.createRef();
+  const giftNameInput = createRef<HTMLInputElement>();
+  const giftLinkInput = createRef<HTMLInputElement>();
+  const giftDescriptionTextarea = createRef<HTMLTextAreaElement>();
 
   const addGift = () => {
-    const giftName = giftNameInput.current.value;
-    const giftLink = giftLinkInput.current.value;
-    const giftDescription = giftDescriptionTextarea.current.value;
+    const currentGiftName = giftNameInput.current;
+    const currentGiftLink = giftLinkInput.current;
+    const currentGiftDescription = giftDescriptionTextarea.current;
 
-    return dispatch(addGiftActionCreator(giftName, giftLink, giftDescription));
+    if (currentGiftDescription && currentGiftLink && currentGiftName) {
+      const giftName = currentGiftName.value;
+      const giftLink = currentGiftLink.value;
+      const giftDescription = currentGiftDescription.value;
+
+      return dispatch(addGiftActionCreator(giftName, giftLink, giftDescription));
+    }
+
+    return undefined;
   };
 
   return (

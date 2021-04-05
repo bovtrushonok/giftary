@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import { iModalProps } from '../types/interfaces';
 import { addEventActionCreator } from '../redux/profilePageReducers';
 import {
@@ -6,15 +6,21 @@ import {
 } from '../sharedViews/index';
 
 export const AddEventModal: React.FC<iModalProps> = ({ dispatch }: iModalProps) => {
-  const eventNameInput: any = React.createRef();
-  const eventDayInput: any = React.createRef();
+  const eventNameInput = createRef<HTMLInputElement>();
+  const eventDayInput = createRef<HTMLInputElement>();
 
-  const addEvent = () => {
-    const eventName = eventNameInput.current.value;
-    const eventDay = eventDayInput.current.value;
+  function addEvent() {
+    const currentEventNameInput = eventNameInput.current;
+    const currentEventDayInput = eventDayInput.current;
 
-    return dispatch(addEventActionCreator(eventName, eventDay));
-  };
+    if (currentEventNameInput && currentEventDayInput) {
+      const eventName = currentEventNameInput.value;
+      const eventDay = currentEventDayInput.value;
+      return dispatch(addEventActionCreator(eventName, eventDay));
+    }
+
+    return undefined;
+  }
 
   return (
     <Overlay>

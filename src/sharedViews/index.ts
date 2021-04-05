@@ -3,7 +3,7 @@ import { Button } from './button';
 import { Input } from './input';
 import { Overlay } from './modalOverlay';
 import { TextArea } from './textArea';
-import { InputBlock, FormWrapper } from './form';
+import { InputBlock, FormWrapper, ButtonBlock } from './form';
 import { AvatarWrapper } from './avatar';
 import { NavWrapper, linkStyle, linkActiveStyle } from './bottomNav';
 import {
@@ -29,7 +29,7 @@ export {
   Input,
   Overlay,
   TextArea,
-  InputBlock,
+  InputBlock, ButtonBlock,
   AvatarWrapper,
   NavWrapper, linkStyle, linkActiveStyle,
   DateBlock, EventListItem,
