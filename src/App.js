@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Redirect, Route } from 'react-router-dom';
 import * as path from './constants/routePaths';
 import ProfilePage from './pages/profile';
 import AuthorizationPage from './pages/auth/authPage';
@@ -26,19 +26,7 @@ const App = ({ state, dispatch }) => {
             />
           )}
         />
-        <Route
-          path={path.defaultPath}
-          exact
-          render={() => (
-            <ProfilePage
-              gifts={state.profilePage.giftsData}
-              events={state.profilePage.eventsData}
-              mode={state.profilePage.mode}
-              addMode={state.profilePage.addMode}
-              dispatch={dispatch}
-            />
-          )}
-        />
+        <Redirect exact from={path.defaultPath} to={path.profilePath} />
         <Route
           path={path.eventsPagePath}
           render={() => (
