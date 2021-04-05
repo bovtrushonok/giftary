@@ -10,7 +10,7 @@ import {
 
 const ProfilePage: React.FC<profileProps> = ({
   events, gifts, mode, addMode, dispatch,
-} : profileProps) => {
+}) => {
   const giftItems = gifts.map((g) => (
     <MyGift
       giftName={g.giftName}

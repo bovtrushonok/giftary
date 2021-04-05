@@ -5,7 +5,7 @@ import {
   Wrapper, Content, List, PageIntroduction,
 } from '../sharedViews/index';
 
-const FriendsList: React.FC<iFriendsListProps> = ({ friends } : iFriendsListProps) => {
+const FriendsList: React.FC<iFriendsListProps> = ({ friends }) => {
   const friendItems = friends.map((f) => (
     <FriendLabel
       friendName={f.friendName}

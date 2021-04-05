@@ -5,7 +5,7 @@ import {
   Wrapper, Content, PageIntroduction, List,
 } from '../sharedViews/index';
 
-const EventListPage: React.FC<iFriendEventList> = ({ friendEvents }: iFriendEventList) => {
+const EventListPage: React.FC<iFriendEventList> = ({ friendEvents }) => {
   const friendEventItems = friendEvents.map((ev) => (
     <FriendEvent
       friendName={ev.friendName}

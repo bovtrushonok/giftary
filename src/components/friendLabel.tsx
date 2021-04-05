@@ -3,7 +3,7 @@ import { iFriendProps } from '../types/interfaces';
 import { Avatar } from './avatar';
 import { FriendInfo, EventListItem } from '../sharedViews/index';
 
-export const FriendLabel: React.FC<iFriendProps> = ({ friendName, friendAvatar }: iFriendProps) => (
+export const FriendLabel: React.FC<iFriendProps> = ({ friendName, friendAvatar }) => (
   <FriendInfo>
     <Avatar friendAvatar={friendAvatar} />
     <EventListItem>

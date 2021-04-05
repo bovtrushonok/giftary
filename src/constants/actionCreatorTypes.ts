@@ -1,2 +1,2 @@
-export const ADD_EVENT_TYPE: string = 'ADD-EVENT';
-export const ADD_GIFT_TYPE: string = 'ADD-GIFT';
+export const ADD_EVENT: string = 'ADD_EVENT';
+export const ADD_GIFT: string = 'ADD_GIFT';

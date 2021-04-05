@@ -7,7 +7,7 @@ import {
 
 export const FriendEvent: React.FC<iFriendEventProps> = ({
   friendName, friendAvatar, eventName, eventDay, eventMonth,
-} : iFriendEventProps) => (
+}) => (
   <FriendInfo>
     <Avatar friendAvatar={friendAvatar} />
     <EventListItem>

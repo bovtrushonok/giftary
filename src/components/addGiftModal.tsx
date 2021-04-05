@@ -1,14 +1,14 @@
-import React, { createRef } from 'react';
+import React from 'react';
 import { iModalProps } from '../types/interfaces';
 import { addGiftActionCreator } from '../redux/profilePageReducers';
 import {
   Modal, Button, TextArea, Input, InputBlock,
 } from '../sharedViews/index';
 
-export const AddGiftModal: React.FC<iModalProps> = ({ dispatch }: any) => {
-  const giftNameInput = createRef<HTMLInputElement>();
-  const giftLinkInput = createRef<HTMLInputElement>();
-  const giftDescriptionTextarea = createRef<HTMLTextAreaElement>();
+export const AddGiftModal: React.FC<iModalProps> = ({ dispatch }) => {
+  const giftNameInput = React.createRef<HTMLInputElement | null>();
+  const giftLinkInput = React.createRef<HTMLInputElement | null>();
+  const giftDescriptionTextarea = React.createRef<HTMLTextAreaElement | null>();
 
   const addGift = () => {
     const currentGiftName = giftNameInput.current;
@@ -22,8 +22,6 @@ export const AddGiftModal: React.FC<iModalProps> = ({ dispatch }: any) => {
 
       return dispatch(addGiftActionCreator(giftName, giftLink, giftDescription));
     }
-
-    return undefined;
   };
 
   return (

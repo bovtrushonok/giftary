@@ -50,7 +50,7 @@ export interface profileProps {
   gifts: Array<giftProps>;
   mode: string;
   addMode: string;
-  dispatch: object;
+  dispatch: any;
 }
 
 export interface iState {

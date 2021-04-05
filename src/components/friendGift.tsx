@@ -4,7 +4,7 @@ import { FriendGiftListItem, GiftWrapper, Input } from '../sharedViews/index';
 
 export const FriendGift: React.FC<iFriendGiftProps> = ({
   giftName, giftLink, giftDescription,
-} : iFriendGiftProps) => (
+}) => (
   <FriendGiftListItem>
     <GiftWrapper>
       <span>{giftName}</span>
