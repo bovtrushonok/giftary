@@ -1,6 +1,6 @@
 import React from 'react';
 import { iFriendEventProps } from '../types/interfaces';
-import { FriendAvatar } from './avatar';
+import { FriendAvatar } from './friendAvatar';
 import {
   DateBlock, EventListItem, FriendInfo,
 } from '../sharedViews/index';

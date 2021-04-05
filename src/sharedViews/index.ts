@@ -17,6 +17,7 @@ import { Wrapper } from './wrapper';
 import { PageIntroduction } from './pageIntroduction';
 import { List } from './list';
 import { IconWrapper } from './profileIconWrapper';
+import { InputCheckbox } from './checkbox';
 
 export {
   Wrapper,
@@ -39,4 +40,5 @@ export {
   GiftListItem,
   Switch, Slider,
   IconWrapper,
+  InputCheckbox,
 };

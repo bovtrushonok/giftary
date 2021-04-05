@@ -1,4 +1,3 @@
-import * as color from '../constants/colors.ts';
 import {
   InputBlock, ButtonBlock, Input, Button,
 } from '../sharedViews/index';
@@ -14,8 +13,8 @@ export const Form = () => (
       <label htmlFor="password" />
     </InputBlock>
     <ButtonBlock>
-      <Button bcColor={color.secondaryBc}> LogIn </Button>
-      <Button bcColor={color.secondaryLightBc}> SignUp </Button>
+      <Button secondary> LogIn </Button>
+      <Button secondaryLight> SignUp </Button>
     </ButtonBlock>
   </>
 );

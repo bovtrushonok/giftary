@@ -8,6 +8,7 @@ import { AddEventModal } from './addEventModal';
 import { FriendLabel } from './friendLabel';
 import { FriendEvent } from './friendEvent';
 import { Form } from './form';
+import { FriendGift } from './friendGift';
 
 export {
   Header,
@@ -20,4 +21,5 @@ export {
   FriendLabel,
   FriendEvent,
   Form,
+  FriendGift,
 };
