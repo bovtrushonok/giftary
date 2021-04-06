@@ -1,12 +1,15 @@
 import {
   ADD_GIFT, ADD_EVENT, ADD_NEW_EVENT_DATE, ADD_NEW_EVENT_NAME, ADD_NEW_EVENT_MONTH,
-  ADD_NEW_GIFT_DESCRIPTION, ADD_NEW_GIFT_LINK, ADD_NEW_GIFT_NAME,
+  ADD_NEW_GIFT_DESCRIPTION, ADD_NEW_GIFT_LINK, ADD_NEW_GIFT_NAME, CHANGE_MODE,
 } from '../constants/actionCreatorTypes';
 
 export const profileReducer = (state, action) => {
   const stateCopy = { ...state };
 
   switch (action.type) {
+    case CHANGE_MODE:
+      stateCopy.mode = (stateCopy.mode === 'onGift') ? 'onEvent' : 'onGift';
+      return stateCopy;
     case ADD_EVENT:
       stateCopy.newEventData = { ...state.newEventData };
       stateCopy.eventsData.push(stateCopy.newEventData);
@@ -82,4 +85,8 @@ export const addNewGiftLinkActionCreator = (giftLink) => ({
 export const addNewGiftDescriptionActionCreator = (giftDescription) => ({
   type: ADD_NEW_GIFT_DESCRIPTION,
   giftDescription,
+});
+
+export const changeModeActionCreator = () => ({
+  type: CHANGE_MODE,
 });

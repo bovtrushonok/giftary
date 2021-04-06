@@ -70,3 +70,7 @@ export interface IEventModal {
   dispatch: any;
   newEvent: eventProps;
 }
+
+export interface ISwitcher {
+  dispatch: any;
+}

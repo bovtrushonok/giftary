@@ -37,7 +37,7 @@ const ProfilePage: React.FC<IProfileProps> = ({
       <Wrapper>
         <Content>
           <Header />
-          <SwitchComponent />
+          <SwitchComponent dispatch={dispatch} />
           <List>
             {mode === 'onGift' && giftItems}
             {mode === 'onEvent' && eventItems}

@@ -13,4 +13,10 @@ export const InputCheckbox = styled.input.attrs(() => ({
   &:focus {
     outline: none;
   }
+
+  ${(props) => props.Toggle && `
+    width: 0;
+    opacity: 0;
+    height: 0;
+  `}
 `;

@@ -6,3 +6,4 @@ export const ADD_NEW_EVENT_MONTH: string = 'ADD_NEW_EVENT_MONTH';
 export const ADD_NEW_GIFT_NAME: string = 'ADD_NEW_GIFT_NAME';
 export const ADD_NEW_GIFT_LINK: string = 'ADD_NEW_GIFT_LINK';
 export const ADD_NEW_GIFT_DESCRIPTION: string = 'ADD_NEW_GIFT_DESCRIPTION';
+export const CHANGE_MODE: string = 'CHANGE_MODE';
