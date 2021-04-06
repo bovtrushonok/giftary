@@ -1,11 +1,10 @@
 import React from 'react';
-import AddBoxRoundedIcon from '@material-ui/icons/AddBoxRounded';
 import { IProfileProps } from '../types/interfaces';
 import {
-  Header, BottomNav, SwitchComponent, MyEvent, MyGift, AddEventModal, AddGiftModal,
+  Header, BottomNav, SwitchComponent, MyEvent, MyGift, AddEventModal, AddGiftModal, OpenModalButton,
 } from '../components/index';
 import {
-  Wrapper, Content, List, IconWrapper,
+  Wrapper, Content, List,
 } from '../sharedViews/index';
 
 const ProfilePage: React.FC<IProfileProps> = ({
@@ -42,10 +41,7 @@ const ProfilePage: React.FC<IProfileProps> = ({
             {mode === 'onGift' && giftItems}
             {mode === 'onEvent' && eventItems}
           </List>
-          <IconWrapper>
-            <AddBoxRoundedIcon />
-            <span>Add gifts to your wish list</span>
-          </IconWrapper>
+          <OpenModalButton dispatch={dispatch} />
         </Content>
         <BottomNav />
       </Wrapper>

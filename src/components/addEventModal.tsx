@@ -2,7 +2,7 @@ import React from 'react';
 import { IEventModal } from '../types/interfaces';
 import {
   addEventActionCreator, addNewEventNameActionCreator, addNewEventDayActionCreator,
-  addNewEventMonthActionCreator,
+  addNewEventMonthActionCreator, closeModalActionCreator,
 } from '../redux/profilePageReducers';
 import {
   Modal, Button, Input, Overlay,
@@ -25,8 +25,12 @@ export const AddEventModal: React.FC<IEventModal> = ({ dispatch, newEvent }) => 
     return dispatch(addEventActionCreator());
   }
 
+  function closeModalWindow() {
+    return dispatch(closeModalActionCreator());
+  }
+
   return (
-    <Overlay>
+    <Overlay onClick={closeModalWindow}>
       <Modal>
         <Input id="eventName" type="text" placeholder="Event" onChange={changeEventName} value={newEvent.eventName} />
         <Input id="eventDay" type="text" placeholder="Add day as DD" onChange={changeEventDay} value={newEvent.eventDay} />

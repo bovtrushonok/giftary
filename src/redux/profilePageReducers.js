@@ -1,6 +1,7 @@
 import {
   ADD_GIFT, ADD_EVENT, ADD_NEW_EVENT_DATE, ADD_NEW_EVENT_NAME, ADD_NEW_EVENT_MONTH,
   ADD_NEW_GIFT_DESCRIPTION, ADD_NEW_GIFT_LINK, ADD_NEW_GIFT_NAME, CHANGE_MODE,
+  OPEN_MODAL, CLOSE_MODAL,
 } from '../constants/actionCreatorTypes';
 
 export const profileReducer = (state, action) => {
@@ -9,6 +10,12 @@ export const profileReducer = (state, action) => {
   switch (action.type) {
     case CHANGE_MODE:
       stateCopy.mode = (stateCopy.mode === 'onGift') ? 'onEvent' : 'onGift';
+      return stateCopy;
+    case OPEN_MODAL:
+      stateCopy.addMode = 'true';
+      return stateCopy;
+    case CLOSE_MODAL:
+      stateCopy.addMode = 'false';
       return stateCopy;
     case ADD_EVENT:
       stateCopy.newEventData = { ...state.newEventData };
@@ -89,4 +96,12 @@ export const addNewGiftDescriptionActionCreator = (giftDescription) => ({
 
 export const changeModeActionCreator = () => ({
   type: CHANGE_MODE,
+});
+
+export const openModalActionCreator = () => ({
+  type: OPEN_MODAL,
+});
+
+export const closeModalActionCreator = () => ({
+  type: CLOSE_MODAL,
 });

@@ -7,3 +7,5 @@ export const ADD_NEW_GIFT_NAME: string = 'ADD_NEW_GIFT_NAME';
 export const ADD_NEW_GIFT_LINK: string = 'ADD_NEW_GIFT_LINK';
 export const ADD_NEW_GIFT_DESCRIPTION: string = 'ADD_NEW_GIFT_DESCRIPTION';
 export const CHANGE_MODE: string = 'CHANGE_MODE';
+export const OPEN_MODAL: string = 'OPEN_MODAL';
+export const CLOSE_MODAL: string = 'CLOSE_MODAL';

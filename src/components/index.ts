@@ -9,6 +9,7 @@ import { FriendLabel } from './friendLabel';
 import { FriendEvent } from './friendEvent';
 import { Form } from './form';
 import { FriendGift } from './friendGift';
+import { OpenModalButton } from './openModalButton';
 
 export {
   Header,
@@ -22,4 +23,5 @@ export {
   FriendEvent,
   Form,
   FriendGift,
+  OpenModalButton,
 };

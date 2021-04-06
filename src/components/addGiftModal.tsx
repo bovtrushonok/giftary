@@ -2,10 +2,10 @@ import React from 'react';
 import { IGiftModal } from '../types/interfaces';
 import {
   addGiftActionCreator, addNewGiftNameActionCreator, addNewGiftLinkActionCreator,
-  addNewGiftDescriptionActionCreator,
+  addNewGiftDescriptionActionCreator, closeModalActionCreator,
 } from '../redux/profilePageReducers';
 import {
-  Modal, Button, TextArea, Input, InputBlock,
+  Modal, Button, TextArea, Input, InputBlock, Overlay,
 } from '../sharedViews/index';
 
 export const AddGiftModal: React.FC<IGiftModal> = ({ dispatch, newGift }) => {
@@ -23,14 +23,20 @@ export const AddGiftModal: React.FC<IGiftModal> = ({ dispatch, newGift }) => {
     dispatch(addNewGiftDescriptionActionCreator(e.currentTarget.value));
   }
 
+  function closeModalWindow() {
+    return dispatch(closeModalActionCreator());
+  }
+
   return (
-    <Modal>
-      <InputBlock>
-        <Input id="giftName" type="text" placeholder="Gift" value={newGift.giftName} onChange={changeGiftName} />
-        <Input id="giftLink" type="text" placeholder="Link" value={newGift.giftLink} onChange={changeGiftLink} />
-      </InputBlock>
-      <TextArea placeholder="Description" value={newGift.giftDescription} onChange={changeGiftDescription} />
-      <Button onClick={addGift}>Add gift</Button>
-    </Modal>
+    <Overlay onClick={closeModalWindow}>
+      <Modal>
+        <InputBlock>
+          <Input id="giftName" type="text" placeholder="Gift" value={newGift.giftName} onChange={changeGiftName} />
+          <Input id="giftLink" type="text" placeholder="Link" value={newGift.giftLink} onChange={changeGiftLink} />
+        </InputBlock>
+        <TextArea placeholder="Description" value={newGift.giftDescription} onChange={changeGiftDescription} />
+        <Button onClick={addGift}>Add gift</Button>
+      </Modal>
+    </Overlay>
   );
 };

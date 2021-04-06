@@ -74,3 +74,7 @@ export interface IEventModal {
 export interface ISwitcher {
   dispatch: any;
 }
+
+export interface IOpenModal {
+  dispatch: any;
+}
