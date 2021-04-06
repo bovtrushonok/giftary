@@ -1,6 +1,6 @@
 import React from 'react';
 import AddBoxRoundedIcon from '@material-ui/icons/AddBoxRounded';
-import { profileProps } from '../types/interfaces';
+import { IProfileProps } from '../types/interfaces';
 import {
   Header, BottomNav, SwitchComponent, MyEvent, MyGift, AddEventModal, AddGiftModal,
 } from '../components/index';
@@ -8,8 +8,8 @@ import {
   Wrapper, Content, List, IconWrapper,
 } from '../sharedViews/index';
 
-const ProfilePage: React.FC<profileProps> = ({
-  events, gifts, mode, addMode, dispatch,
+const ProfilePage: React.FC<IProfileProps> = ({
+  events, gifts, mode, addMode, dispatch, newEvent, newGift,
 }) => {
   const giftItems = gifts.map((g) => (
     <MyGift
@@ -31,8 +31,8 @@ const ProfilePage: React.FC<profileProps> = ({
 
   return (
     <>
-      {addMode === 'true' && mode === 'onGift' && <AddGiftModal dispatch={dispatch} />}
-      {addMode === 'true' && mode === 'onEvent' && <AddEventModal dispatch={dispatch} />}
+      {addMode === 'true' && mode === 'onGift' && <AddGiftModal dispatch={dispatch} newGift={newGift} />}
+      {addMode === 'true' && mode === 'onEvent' && <AddEventModal dispatch={dispatch} newEvent={newEvent} />}
       {addMode === 'false' && (
       <Wrapper>
         <Content>

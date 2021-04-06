@@ -38,6 +38,12 @@ export const store = {
           eventName: 'Second event', eventDay: '26', eventMonth: 'April', id: '1',
         },
       ],
+      newGiftData: {
+        giftName: '', giftLink: '', giftDescription: '', id: '5',
+      },
+      newEventData: {
+        eventName: '', eventDay: '', eventMonth: '', id: '5',
+      },
     },
   },
 
@@ -55,5 +61,6 @@ export const store = {
 
   dispatch(action) {
     this.state.profilePage = profileReducer(this.state.profilePage, action);
+    this.reRenderTree();
   },
 };

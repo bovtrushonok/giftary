@@ -10,7 +10,7 @@ export const Button = styled.button`
   text-transform: capitalize;
   font-family: Tahoma, sans-serif;
   font-size: 1.1em;
-  background-color: 'transparent';
+  background-color: transparent;
   &:active,
   &:focus {
     outline: ${color.mainShadows} 0.5px solid;

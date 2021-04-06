@@ -1,36 +1,35 @@
 import React from 'react';
-import { iModalProps } from '../types/interfaces';
-import { addGiftActionCreator } from '../redux/profilePageReducers';
+import { IGiftModal } from '../types/interfaces';
+import {
+  addGiftActionCreator, addNewGiftNameActionCreator, addNewGiftLinkActionCreator,
+  addNewGiftDescriptionActionCreator,
+} from '../redux/profilePageReducers';
 import {
   Modal, Button, TextArea, Input, InputBlock,
 } from '../sharedViews/index';
 
-export const AddGiftModal: React.FC<iModalProps> = ({ dispatch }) => {
-  const giftNameInput = React.createRef<HTMLInputElement | null>();
-  const giftLinkInput = React.createRef<HTMLInputElement | null>();
-  const giftDescriptionTextarea = React.createRef<HTMLTextAreaElement | null>();
+export const AddGiftModal: React.FC<IGiftModal> = ({ dispatch, newGift }) => {
+  const addGift = () => dispatch(addGiftActionCreator());
 
-  const addGift = () => {
-    const currentGiftName = giftNameInput.current;
-    const currentGiftLink = giftLinkInput.current;
-    const currentGiftDescription = giftDescriptionTextarea.current;
+  function changeGiftName(e: React.FormEvent<HTMLInputElement>) {
+    dispatch(addNewGiftNameActionCreator(e.currentTarget.value));
+  }
 
-    if (currentGiftDescription && currentGiftLink && currentGiftName) {
-      const giftName = currentGiftName.value;
-      const giftLink = currentGiftLink.value;
-      const giftDescription = currentGiftDescription.value;
+  function changeGiftLink(e: React.FormEvent<HTMLInputElement>) {
+    dispatch(addNewGiftLinkActionCreator(e.currentTarget.value));
+  }
 
-      return dispatch(addGiftActionCreator(giftName, giftLink, giftDescription));
-    }
-  };
+  function changeGiftDescription(e: React.FormEvent<HTMLTextAreaElement>) {
+    dispatch(addNewGiftDescriptionActionCreator(e.currentTarget.value));
+  }
 
   return (
     <Modal>
       <InputBlock>
-        <Input id="giftName" type="text" placeholder="Gift" ref={giftNameInput} />
-        <Input id="giftLink" type="text" placeholder="Link" ref={giftLinkInput} />
+        <Input id="giftName" type="text" placeholder="Gift" value={newGift.giftName} onChange={changeGiftName} />
+        <Input id="giftLink" type="text" placeholder="Link" value={newGift.giftLink} onChange={changeGiftLink} />
       </InputBlock>
-      <TextArea placeholder="Description" ref={giftDescriptionTextarea} />
+      <TextArea placeholder="Description" value={newGift.giftDescription} onChange={changeGiftDescription} />
       <Button onClick={addGift}>Add gift</Button>
     </Modal>
   );

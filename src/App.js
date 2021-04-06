@@ -20,6 +20,8 @@ const App = ({ state, dispatch }) => {
               gifts={state.profilePage.giftsData}
               events={state.profilePage.eventsData}
               mode={state.profilePage.mode}
+              newEvent={state.profilePage.newEventData}
+              newGift={state.profilePage.newGiftData}
               addMode={state.profilePage.addMode}
               dispatch={dispatch}
             />

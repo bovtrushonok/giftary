@@ -45,20 +45,28 @@ export interface iFriendsListProps {
   friends: Array<iFriendProps>
 }
 
-export interface profileProps {
+export interface IProfileProps {
   events: Array<eventProps>;
   gifts: Array<giftProps>;
   mode: string;
   addMode: string;
   dispatch: any;
+  newEvent: eventProps;
+  newGift: giftProps;
 }
 
 export interface iState {
-  profilePage: profileProps;
+  profilePage: IProfileProps;
   friendsPage: iFriendsListProps;
   eventsPage: iFriendEventList;
 }
 
-export interface iModalProps {
+export interface IGiftModal {
   dispatch: any;
+  newGift: giftProps;
+}
+
+export interface IEventModal {
+  dispatch: any;
+  newEvent: eventProps;
 }
