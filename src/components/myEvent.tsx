@@ -1,8 +1,8 @@
 import React from 'react';
-import { eventProps } from '../types/interfaces';
+import { IEventProps } from '../types/interfaces';
 import { DateBlock, EventListItem } from '../sharedViews/index';
 
-export const MyEvent: React.FC<eventProps> = ({ eventName, eventDay, eventMonth }) => (
+export const MyEvent: React.FC<IEventProps> = ({ eventName, eventDay, eventMonth }) => (
   <EventListItem>
     <span>{eventName}</span>
     <DateBlock>

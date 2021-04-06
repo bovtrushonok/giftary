@@ -1,11 +1,11 @@
 import React from 'react';
-import { iFriendEventList } from '../types/interfaces';
+import { IFriendEventList } from '../types/interfaces';
 import { Header, BottomNav, FriendEvent } from '../components/index';
 import {
   Wrapper, Content, PageIntroduction, List,
 } from '../sharedViews/index';
 
-const EventListPage: React.FC<iFriendEventList> = ({ friendEvents }) => {
+const EventListPage: React.FC<IFriendEventList> = ({ friendEvents }) => {
   const friendEventItems = friendEvents.map((ev) => (
     <FriendEvent
       friendName={ev.friendName}

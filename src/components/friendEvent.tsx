@@ -1,11 +1,11 @@
 import React from 'react';
-import { iFriendEventProps } from '../types/interfaces';
+import { IFriendEventProps } from '../types/interfaces';
 import { FriendAvatar } from './friendAvatar';
 import {
   DateBlock, EventListItem, FriendInfo,
 } from '../sharedViews/index';
 
-export const FriendEvent: React.FC<iFriendEventProps> = ({
+export const FriendEvent: React.FC<IFriendEventProps> = ({
   friendName, friendAvatar, eventName, eventDay, eventMonth,
 }) => (
   <FriendInfo>

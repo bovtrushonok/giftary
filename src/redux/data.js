@@ -1,4 +1,5 @@
 import { profileReducer } from './profilePageReducers';
+import { modalReducer } from './modalsReducers';
 
 export const store = {
   state: {
@@ -61,6 +62,7 @@ export const store = {
 
   dispatch(action) {
     this.state.profilePage = profileReducer(this.state.profilePage, action);
+    this.state.profilePage = modalReducer(this.state.profilePage, action);
     this.reRenderTree();
   },
 };

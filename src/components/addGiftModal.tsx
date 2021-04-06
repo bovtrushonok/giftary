@@ -2,8 +2,9 @@ import React from 'react';
 import { IGiftModal } from '../types/interfaces';
 import {
   addGiftActionCreator, addNewGiftNameActionCreator, addNewGiftLinkActionCreator,
-  addNewGiftDescriptionActionCreator, closeModalActionCreator,
-} from '../redux/profilePageReducers';
+  addNewGiftDescriptionActionCreator,
+} from '../redux/modalsReducers';
+import { closeModalActionCreator } from '../redux/profilePageReducers';
 import {
   Modal, Button, TextArea, Input, InputBlock, Overlay,
 } from '../sharedViews/index';

@@ -1,10 +1,10 @@
 import React from 'react';
-import { giftProps } from '../types/interfaces';
+import { IGiftProps } from '../types/interfaces';
 import {
   GiftListItem, GiftWrapper,
 } from '../sharedViews/index';
 
-export const MyGift : React.FC<giftProps> = ({ giftName, giftLink, giftDescription }) => (
+export const MyGift : React.FC<IGiftProps> = ({ giftName, giftLink, giftDescription }) => (
   <GiftListItem>
     <GiftWrapper>
       <span>{giftName}</span>
