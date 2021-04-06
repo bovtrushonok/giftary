@@ -24,14 +24,14 @@ export const AddGiftModal: React.FC<IGiftModal> = ({ dispatch, newGift }) => {
     dispatch(addNewGiftDescriptionActionCreator(e.currentTarget.value));
   }
 
-  function closeModalWindow() {
-    return dispatch(closeModalActionCreator());
+  function closeModalWindow(event: React.SyntheticEvent) {
+    if (event.target === event.currentTarget) return dispatch(closeModalActionCreator());
   }
 
   return (
     <Overlay onClick={closeModalWindow}>
       <Modal>
-        <InputBlock>
+        <InputBlock modal>
           <Input id="giftName" type="text" placeholder="Gift" value={newGift.giftName} onChange={changeGiftName} />
           <Input id="giftLink" type="text" placeholder="Link" value={newGift.giftLink} onChange={changeGiftLink} />
         </InputBlock>

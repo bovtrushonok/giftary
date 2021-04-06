@@ -3,17 +3,17 @@ import * as color from '../constants/colors.ts';
 
 export const IconWrapper = styled.div`
   display: flex;
-  flex-flow: column wrap;
-  justify-items: flex-start;
-  align-items: flex-end;
-  width: 25%;
-  align-self: flex-end;
+  position: relative;
   justify-self: flex-end;
+  flex-flow: column wrap;
+  width: 100%;
+  margin: 15px auto;
 
   span {
     display: none;
     font-style: italic;
     color: ${color.primaryText};
+    align-self: center;
   }
 
   svg {
@@ -21,7 +21,10 @@ export const IconWrapper = styled.div`
     color: ${color.secondaryIcon};
     display: flex;
     align-self: flex-end;
+    position: absolute;
+    right: -7px;
   }
+
   svg:hover {
     color: ${color.secondaryDarkenIcon};
     cursor: pointer;

@@ -16,6 +16,10 @@ export const InputBlock = styled.div`
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+
+  ${(props) => props.modal && `
+    width: 90%;
+  `}
 `;
 
 export const ButtonBlock = styled(InputBlock)`

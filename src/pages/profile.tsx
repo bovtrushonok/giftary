@@ -40,8 +40,8 @@ const ProfilePage: React.FC<IProfileProps> = ({
           <List>
             {mode === 'onGift' && giftItems}
             {mode === 'onEvent' && eventItems}
+            <OpenModalButton dispatch={dispatch} />
           </List>
-          <OpenModalButton dispatch={dispatch} />
         </Content>
         <BottomNav />
       </Wrapper>

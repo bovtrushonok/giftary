@@ -15,18 +15,17 @@ export const Modal = styled.section`
   background: linear-gradient(180deg, ${color.topBcModalGradient}, ${color.middleBcModalGradient}, ${color.bottomBcModalGradient});
   position: absolute;
   bottom: 0;
-  left: 27%;
-  z-index: 2;
+  left: 0;
+  right: 0;
+  z-index: 3;
   border-radius: 14px;
+  
+  @media screen and (max-width: ${size.mediumScreen}) {
+    width: 85%;
+  }
   
   @media screen and (max-width: ${size.smallScreen}) {
     margin: 30px 0;
-    width: 95%;
-    left: 2.4%;
-  }
-
-  @media screen and (min-width: ${size.mediumScreen}) {
-    width: 75%;
-    left: 12%;
+    width: 97%;
   }
 `;

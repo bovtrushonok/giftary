@@ -26,8 +26,8 @@ export const AddEventModal: React.FC<IEventModal> = ({ dispatch, newEvent }) => 
     return dispatch(addEventActionCreator());
   }
 
-  function closeModalWindow() {
-    return dispatch(closeModalActionCreator());
+  function closeModalWindow(event: React.SyntheticEvent) {
+    if (event.target === event.currentTarget) return dispatch(closeModalActionCreator());
   }
 
   return (

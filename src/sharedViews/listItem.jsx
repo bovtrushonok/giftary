@@ -41,25 +41,19 @@ const GiftListItem = styled(ListItem)`
 
 const FriendGiftListItem = styled(GiftListItem)`
   justify-content: space-between;
-  
-  input {
-    display: flex;
-    justify-self: flex-end;
-    width: 10%;
-    height: 20px;
-  }
 `;
 
 const DateBlock = styled.div`
   display: flex;
   flex-flow: column wrap;
   justify-self: flex-end;
-  align-content: flex-end;
-  justify-content: center;
+  alignn-self: center;
+  align-content: center;
+  justify-items: flex-end;
   width: 40%;
 
   p {
-    font-size: 17px;
+    font-size: 25px;
     color: ${color.accentRedText};
     margin: 0;
     padding: 0;
@@ -77,6 +71,7 @@ const EventListItem = styled(ListItem)`
   span {
     font-size: 19px;
     color: ${color.secondaryDarkenText};
+    width: 50%;
   }
 
   div + p {
@@ -86,6 +81,7 @@ const EventListItem = styled(ListItem)`
     color: ${color.secondaryLightText};
     padding: 0;
     margin: 0;
+    width: 30%;
   }
 `;
 
