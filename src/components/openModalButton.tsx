@@ -1,6 +1,6 @@
 import React from 'react';
 import AddBoxRoundedIcon from '@material-ui/icons/AddBoxRounded';
-import { IOpenModal } from '../types/interfaces';
+import { IOpenModal } from '../types';
 import { openModalActionCreator } from '../redux/actions';
 import { IconWrapper } from '../sharedViews';
 

@@ -27,6 +27,7 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
         "import/prefer-default-export": "off",
         "jsx-a11y/label-has-associated-control": "off",
+        "react/jsx-props-no-spreading": 0,
         "no-use-before-define": "off",
         "react/prop-types": "off",
         "@typescript-eslint/no-use-before-define": ["error"],

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IGiftProps } from '../types/interfaces';
+import { IGiftProps } from '../types';
 import {
   GiftListItem, GiftWrapper,
 } from '../sharedViews';

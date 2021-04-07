@@ -1,5 +1,5 @@
 import React from 'react';
-import { IFriendEventProps } from '../types/interfaces';
+import { IFriendEventProps } from '../types';
 import { FriendAvatar } from './friendAvatar';
 import {
   DateBlock, EventListItem, FriendInfo,

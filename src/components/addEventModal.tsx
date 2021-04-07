@@ -1,5 +1,5 @@
 import React from 'react';
-import { IEventModal } from '../types/interfaces';
+import { IEventModal } from '../types';
 import {
   addEventActionCreator, addNewEventNameActionCreator, addNewEventDayActionCreator,
   addNewEventMonthActionCreator, closeModalActionCreator,

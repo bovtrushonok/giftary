@@ -1,5 +1,5 @@
 import React from 'react';
-import { IFriendEventList } from '../types/interfaces';
+import { IFriendEventList } from '../types';
 import { Header, BottomNav, FriendEvent } from '../components';
 import {
   Wrapper, Content, PageIntroduction, List,
@@ -7,14 +7,7 @@ import {
 
 const EventListPage: React.FC<IFriendEventList> = ({ friendEvents }) => {
   const friendEventItems = friendEvents.map((ev) => (
-    <FriendEvent
-      friendName={ev.friendName}
-      friendAvatar={ev.friendAvatar}
-      eventName={ev.eventName}
-      eventDay={ev.eventDay}
-      eventMonth={ev.eventMonth}
-      id={ev.id}
-    />
+    <FriendEvent {...ev} />
   ));
 
   return (

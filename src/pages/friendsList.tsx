@@ -1,5 +1,5 @@
 import React from 'react';
-import { IFriendsPageProps } from '../types/interfaces';
+import { IFriendsPageProps } from '../types';
 import { Header, BottomNav, FriendLabel } from '../components';
 import {
   Wrapper, Content, List, PageIntroduction,
@@ -7,11 +7,7 @@ import {
 
 const FriendsList: React.FC<IFriendsPageProps> = ({ friends }) => {
   const friendItems = friends.map((f) => (
-    <FriendLabel
-      friendName={f.friendName}
-      friendAvatar={f.friendAvatar}
-      id={f.id}
-    />
+    <FriendLabel {...f} />
   ));
   return (
     <Wrapper>

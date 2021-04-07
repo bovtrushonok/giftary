@@ -1,5 +1,5 @@
 import React from 'react';
-import { IProfileProps } from '../types/interfaces';
+import { IProfileProps } from '../types';
 import {
   Header, BottomNav, SwitchComponent, MyEvent, MyGift, AddEventModal, AddGiftModal, OpenModalButton,
 } from '../components';
@@ -11,21 +11,11 @@ const ProfilePage: React.FC<IProfileProps> = ({
   events, gifts, mode, addMode, dispatch, newEvent, newGift,
 }) => {
   const giftItems = gifts.map((g) => (
-    <MyGift
-      giftName={g.giftName}
-      giftLink={g.giftLink}
-      giftDescription={g.giftDescription}
-      id={g.id}
-    />
+    <MyGift {...g} />
   ));
 
   const eventItems = events.map((item) => (
-    <MyEvent
-      eventName={item.eventName}
-      eventDay={item.eventDay}
-      eventMonth={item.eventMonth}
-      id={item.id}
-    />
+    <MyEvent {...item} />
   ));
 
   return (

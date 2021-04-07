@@ -1,5 +1,5 @@
 import React from 'react';
-import { IFriendGiftProps } from '../types/interfaces';
+import { IFriendGiftProps } from '../types';
 import { FriendGiftListItem, GiftWrapper, InputCheckbox } from '../sharedViews';
 
 export const FriendGift: React.FC<IFriendGiftProps> = ({

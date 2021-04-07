@@ -1,5 +1,5 @@
 import React from 'react';
-import { IGiftModal } from '../types/interfaces';
+import { IGiftModal } from '../types';
 import {
   addGiftActionCreator, addNewGiftNameActionCreator, addNewGiftLinkActionCreator,
   addNewGiftDescriptionActionCreator, closeModalActionCreator,

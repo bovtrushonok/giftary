@@ -1,6 +1,6 @@
 import React from 'react';
 import { changeModeActionCreator } from '../redux/actions';
-import { ISwitcher } from '../types/interfaces';
+import { ISwitcher } from '../types';
 import { Switch, Slider, InputCheckbox } from '../sharedViews';
 
 export const SwitchComponent: React.FC<ISwitcher> = ({ dispatch }) => {
