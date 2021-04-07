@@ -5,12 +5,12 @@ import { Overlay } from './modalOverlay';
 import { TextArea } from './textArea';
 import { InputBlock, FormWrapper, ButtonBlock } from './form';
 import { AvatarWrapper } from './avatar';
-import { NavWrapper, linkStyle, linkActiveStyle } from './bottomNav';
+import { NavWrapper, StyledNavbarLink } from './bottomNav';
 import {
   DateBlock, EventListItem, FriendGiftListItem, GiftListItem, GiftWrapper,
 } from './listItem';
 import { FriendInfo, Content } from './contentWrap';
-import { MenuWrapper, linkActiveStyleObj, linkStyleObj } from './header';
+import { MenuWrapper, StyledHeaderLink } from './header';
 import { Switch } from './switch';
 import { Slider } from './slider';
 import { Wrapper } from './wrapper';
@@ -33,11 +33,11 @@ export {
   TextArea,
   InputBlock, ButtonBlock,
   AvatarWrapper,
-  NavWrapper, linkStyle, linkActiveStyle,
+  NavWrapper, StyledNavbarLink,
   DateBlock, EventListItem,
   FriendInfo,
   FriendGiftListItem, GiftWrapper,
-  MenuWrapper, linkActiveStyleObj, linkStyleObj,
+  MenuWrapper, StyledHeaderLink,
   GiftListItem,
   Switch, Slider,
   IconWrapper,

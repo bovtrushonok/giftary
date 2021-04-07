@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import * as color from '../constants/colors.ts';
 import * as size from '../constants/mediaQueries.ts';
@@ -17,12 +18,18 @@ export const NavWrapper = styled.div`
   }
 `;
 
-export const linkStyle = {
+const linkStyle = {
   textDecoration: 'none',
   color: `${color.primaryIcon}`,
 };
 
-export const linkActiveStyle = {
+const linkActiveStyle = {
   fontWeight: 'bold',
   color: `${color.secondaryText}`,
 };
+
+export const StyledNavbarLink = styled(NavLink).attrs({
+  style: linkStyle,
+  activeStyle: linkActiveStyle,
+})`
+`;

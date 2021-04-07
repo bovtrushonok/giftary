@@ -18,10 +18,13 @@ const ProfilePage: React.FC<IProfileProps> = ({
     <MyEvent {...item} />
   ));
 
+  const addGiftMode = addMode === 'true' && mode === 'onGift';
+  const addEventMode = addMode === 'true' && mode === 'onEvent';
+
   return (
     <>
-      {addMode === 'true' && mode === 'onGift' && <AddGiftModal dispatch={dispatch} newGift={newGift} />}
-      {addMode === 'true' && mode === 'onEvent' && <AddEventModal dispatch={dispatch} newEvent={newEvent} />}
+      {addGiftMode && <AddGiftModal dispatch={dispatch} newGift={newGift} />}
+      {addEventMode && <AddEventModal dispatch={dispatch} newEvent={newEvent} />}
       {addMode === 'false' && (
       <Wrapper>
         <Content>

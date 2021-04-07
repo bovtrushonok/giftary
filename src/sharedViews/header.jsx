@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import * as color from '../constants/colors.ts';
 import * as size from '../constants/mediaQueries.ts';
@@ -20,12 +21,18 @@ export const MenuWrapper = styled.div`
   }
 `;
 
-export const linkStyleObj = {
+const linkStyleObj = {
   textDecoration: 'none',
   color: `${color.lightAccentText}`,
 };
 
-export const linkActiveStyleObj = {
+const linkActiveStyleObj = {
   fontWeight: 'bold',
   color: `${color.lightAccentLink}`,
 };
+
+export const StyledHeaderLink = styled(NavLink).attrs({
+  style: linkStyleObj,
+  activeStyle: linkActiveStyleObj,
+})`
+`;
