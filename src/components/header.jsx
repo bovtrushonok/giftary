@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import * as path from '../constants/routePaths.ts';
+import * as path from '../constants/routePaths';
 import { MenuWrapper, linkActiveStyleObj, linkStyleObj } from '../sharedViews';
 
 export const Header = () => (
