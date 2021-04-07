@@ -1,6 +1,6 @@
 import React from 'react';
 import { IEventProps } from '../types/interfaces';
-import { DateBlock, EventListItem } from '../sharedViews/index';
+import { DateBlock, EventListItem } from '../sharedViews';
 
 export const MyEvent: React.FC<IEventProps> = ({ eventName, eventDay, eventMonth }) => (
   <EventListItem>

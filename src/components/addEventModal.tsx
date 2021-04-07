@@ -7,7 +7,7 @@ import {
 import { closeModalActionCreator } from '../redux/profilePageReducers';
 import {
   Modal, Button, Input, Overlay,
-} from '../sharedViews/index';
+} from '../sharedViews';
 
 export const AddEventModal: React.FC<IEventModal> = ({ dispatch, newEvent }) => {
   function changeEventName(e: React.FormEvent<HTMLInputElement>) {

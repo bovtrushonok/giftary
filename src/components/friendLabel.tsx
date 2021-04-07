@@ -1,7 +1,7 @@
 import React from 'react';
 import { IFriendProps } from '../types/interfaces';
 import { FriendAvatar } from './friendAvatar';
-import { FriendInfo, EventListItem } from '../sharedViews/index';
+import { FriendInfo, EventListItem } from '../sharedViews';
 
 export const FriendLabel: React.FC<IFriendProps> = ({ friendName, friendAvatar }) => (
   <FriendInfo>

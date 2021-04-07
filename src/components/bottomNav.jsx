@@ -3,8 +3,8 @@ import EventRoundedIcon from '@material-ui/icons/EventRounded';
 import ContactsRoundedIcon from '@material-ui/icons/ContactsRounded';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import HomeIcon from '@material-ui/icons/Home';
-import * as path from '../constants/routePaths.ts';
-import { NavWrapper, linkStyle, linkActiveStyle } from '../sharedViews/index';
+import * as path from '../constants/routePaths';
+import { NavWrapper, linkStyle, linkActiveStyle } from '../sharedViews';
 
 export const BottomNav = () => (
   <NavWrapper>

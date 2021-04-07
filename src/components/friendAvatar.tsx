@@ -1,6 +1,6 @@
 import React from 'react';
 import { IAvatarProps } from '../types/interfaces';
-import { AvatarWrapper } from '../sharedViews/index';
+import { AvatarWrapper } from '../sharedViews';
 
 export const FriendAvatar: React.FC<IAvatarProps> = ({ friendAvatar }) => (
   <AvatarWrapper>

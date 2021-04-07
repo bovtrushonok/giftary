@@ -23,9 +23,7 @@
         "@typescript-eslint"
     ],
     "rules": {
-        // suppress errors for missing 'import React' in files
         "react/react-in-jsx-scope": "off",
-        // allow jsx syntax
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
         "import/prefer-default-export": "off",
         "jsx-a11y/label-has-associated-control": "off",

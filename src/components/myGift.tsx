@@ -2,7 +2,7 @@ import React from 'react';
 import { IGiftProps } from '../types/interfaces';
 import {
   GiftListItem, GiftWrapper,
-} from '../sharedViews/index';
+} from '../sharedViews';
 
 export const MyGift : React.FC<IGiftProps> = ({ giftName, giftLink, giftDescription }) => (
   <GiftListItem>

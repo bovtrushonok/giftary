@@ -18,6 +18,7 @@ import { PageIntroduction } from './pageIntroduction';
 import { List } from './list';
 import { IconWrapper } from './profileIconWrapper';
 import { InputCheckbox } from './checkbox';
+import { Label } from './inputLabel';
 
 export {
   Wrapper,
@@ -41,4 +42,5 @@ export {
   Switch, Slider,
   IconWrapper,
   InputCheckbox,
+  Label,
 };

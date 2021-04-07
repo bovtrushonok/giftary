@@ -7,9 +7,11 @@ import { AddGiftModal } from './addGiftModal';
 import { AddEventModal } from './addEventModal';
 import { FriendLabel } from './friendLabel';
 import { FriendEvent } from './friendEvent';
-import { Form } from './form';
+import { LoginForm } from './loginForm';
+import { SignupForm } from './signupForm';
 import { FriendGift } from './friendGift';
 import { OpenModalButton } from './openModalButton';
+import { FormInput } from './formLabeledInput';
 
 export {
   Header,
@@ -21,7 +23,9 @@ export {
   AddEventModal,
   FriendLabel,
   FriendEvent,
-  Form,
+  LoginForm,
+  SignupForm,
   FriendGift,
   OpenModalButton,
+  FormInput,
 };

@@ -2,10 +2,10 @@ import React from 'react';
 import { IProfileProps } from '../types/interfaces';
 import {
   Header, BottomNav, SwitchComponent, MyEvent, MyGift, AddEventModal, AddGiftModal, OpenModalButton,
-} from '../components/index';
+} from '../components';
 import {
   Wrapper, Content, List,
-} from '../sharedViews/index';
+} from '../sharedViews';
 
 const ProfilePage: React.FC<IProfileProps> = ({
   events, gifts, mode, addMode, dispatch, newEvent, newGift,

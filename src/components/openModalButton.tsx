@@ -2,7 +2,7 @@ import React from 'react';
 import AddBoxRoundedIcon from '@material-ui/icons/AddBoxRounded';
 import { IOpenModal } from '../types/interfaces';
 import { openModalActionCreator } from '../redux/profilePageReducers';
-import { IconWrapper } from '../sharedViews/index';
+import { IconWrapper } from '../sharedViews';
 
 export const OpenModalButton: React.FC<IOpenModal> = ({ dispatch }) => {
   function openModal() {

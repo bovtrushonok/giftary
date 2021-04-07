@@ -7,7 +7,7 @@ import {
 import { closeModalActionCreator } from '../redux/profilePageReducers';
 import {
   Modal, Button, TextArea, Input, InputBlock, Overlay,
-} from '../sharedViews/index';
+} from '../sharedViews';
 
 export const AddGiftModal: React.FC<IGiftModal> = ({ dispatch, newGift }) => {
   const addGift = () => dispatch(addGiftActionCreator());

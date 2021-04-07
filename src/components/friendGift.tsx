@@ -1,6 +1,6 @@
 import React from 'react';
 import { IFriendGiftProps } from '../types/interfaces';
-import { FriendGiftListItem, GiftWrapper, InputCheckbox } from '../sharedViews/index';
+import { FriendGiftListItem, GiftWrapper, InputCheckbox } from '../sharedViews';
 
 export const FriendGift: React.FC<IFriendGiftProps> = ({
   giftName, giftLink, giftDescription,

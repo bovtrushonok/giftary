@@ -23,8 +23,12 @@ export const Button = styled.button`
   ${(props) => props.secondary && `
     background-color: ${color.secondaryBc};
   `}
-
+  
   ${(props) => props.secondaryLight && `
     background-color: ${color.secondaryLightBc};
+  `}
+
+  ${(props) => props.link && `
+    width: auto;
   `}
 `;
