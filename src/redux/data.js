@@ -1,5 +1,4 @@
-import { profileReducer } from './profilePageReducers';
-import { modalReducer } from './modalsReducers';
+import { profileReducer, modalReducer } from './reducers';
 
 export const store = {
   state: {

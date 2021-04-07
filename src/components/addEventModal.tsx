@@ -2,9 +2,8 @@ import React from 'react';
 import { IEventModal } from '../types/interfaces';
 import {
   addEventActionCreator, addNewEventNameActionCreator, addNewEventDayActionCreator,
-  addNewEventMonthActionCreator,
-} from '../redux/modalsReducers';
-import { closeModalActionCreator } from '../redux/profilePageReducers';
+  addNewEventMonthActionCreator, closeModalActionCreator,
+} from '../redux/actions';
 import {
   Modal, Button, Input, Overlay,
 } from '../sharedViews';

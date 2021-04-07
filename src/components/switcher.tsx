@@ -1,5 +1,5 @@
 import React from 'react';
-import { changeModeActionCreator } from '../redux/profilePageReducers';
+import { changeModeActionCreator } from '../redux/actions';
 import { ISwitcher } from '../types/interfaces';
 import { Switch, Slider, InputCheckbox } from '../sharedViews';
 

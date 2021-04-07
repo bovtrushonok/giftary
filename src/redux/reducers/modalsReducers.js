@@ -1,9 +1,37 @@
 import {
   ADD_GIFT, ADD_EVENT, ADD_NEW_EVENT_DATE, ADD_NEW_EVENT_NAME, ADD_NEW_EVENT_MONTH,
   ADD_NEW_GIFT_DESCRIPTION, ADD_NEW_GIFT_LINK, ADD_NEW_GIFT_NAME,
-} from '../constants/actionCreatorTypes';
+} from '../../constants/actionCreatorTypes';
 
-export const modalReducer = (state, action) => {
+const initialState = {
+  userId: 0,
+  mode: 'onGift', // or onEvent
+  addMode: 'false',
+  giftsData: [
+    {
+      giftName: 'First gift', giftLink: 'some link', giftDescription: 'awesome present', id: '0',
+    },
+    {
+      giftName: 'Second gift', giftLink: 'another link', giftDescription: 'cool present', id: '1',
+    },
+  ],
+  eventsData: [
+    {
+      eventName: 'First event', eventDay: '26', eventMonth: 'March', id: '0',
+    },
+    {
+      eventName: 'Second event', eventDay: '26', eventMonth: 'April', id: '1',
+    },
+  ],
+  newGiftData: {
+    giftName: '', giftLink: '', giftDescription: '', id: '5',
+  },
+  newEventData: {
+    eventName: '', eventDay: '', eventMonth: '', id: '5',
+  },
+};
+
+export const modalReducer = (state = initialState, action) => {
   const stateCopy = { ...state };
 
   switch (action.type) {
@@ -45,41 +73,3 @@ export const modalReducer = (state, action) => {
       return state;
   }
 };
-
-export const addGiftActionCreator = () => ({
-  type: ADD_GIFT,
-});
-
-export const addEventActionCreator = () => ({
-  type: ADD_EVENT,
-});
-
-export const addNewEventNameActionCreator = (eventName) => ({
-  type: ADD_NEW_EVENT_NAME,
-  eventName,
-});
-
-export const addNewEventDayActionCreator = (eventDay) => ({
-  type: ADD_NEW_EVENT_DATE,
-  eventDay,
-});
-
-export const addNewEventMonthActionCreator = (eventMonth) => ({
-  type: ADD_NEW_EVENT_MONTH,
-  eventMonth,
-});
-
-export const addNewGiftNameActionCreator = (giftName) => ({
-  type: ADD_NEW_GIFT_NAME,
-  giftName,
-});
-
-export const addNewGiftLinkActionCreator = (giftLink) => ({
-  type: ADD_NEW_GIFT_LINK,
-  giftLink,
-});
-
-export const addNewGiftDescriptionActionCreator = (giftDescription) => ({
-  type: ADD_NEW_GIFT_DESCRIPTION,
-  giftDescription,
-});

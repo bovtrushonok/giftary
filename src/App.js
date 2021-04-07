@@ -8,7 +8,7 @@ import FriendsList from './pages/friendsList';
 import MainPage from './pages/mainPage';
 
 const App = ({ state, dispatch }) => {
-  const isAuthenticated = false;
+  const isAuthenticated = true;
   if (isAuthenticated) {
     return (
       <>
