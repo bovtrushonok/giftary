@@ -5,7 +5,7 @@ import {
   Wrapper, Content, List, PageIntroduction,
 } from '../sharedViews';
 
-const FriendsList: React.FC<IFriendsPageProps> = ({ friends }) => {
+export const FriendsList: React.FC<IFriendsPageProps> = ({ friends }) => {
   const friendItems = friends.map((f) => (
     <FriendLabel {...f} />
   ));
@@ -28,5 +28,3 @@ const FriendsList: React.FC<IFriendsPageProps> = ({ friends }) => {
     </Wrapper>
   );
 };
-
-export default FriendsList;

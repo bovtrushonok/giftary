@@ -6,7 +6,6 @@ export interface IProfileProps {
   mode: string;
   addMode: string;
   dispatch: any;
-  newEvent: IEventProps;
   newGift: IGiftProps;
 }
 

@@ -1,41 +1,39 @@
 import React from 'react';
 import { IEventModal } from '../types';
 import {
-  addEventActionCreator, addNewEventNameActionCreator, addNewEventDayActionCreator,
-  addNewEventMonthActionCreator, closeModalActionCreator,
-} from '../redux/actions';
-import {
   Modal, Button, Input, Overlay,
 } from '../sharedViews';
 
-export const AddEventModal: React.FC<IEventModal> = ({ dispatch, newEvent }) => {
-  function changeEventName(e: React.FormEvent<HTMLInputElement>) {
-    dispatch(addNewEventNameActionCreator(e.currentTarget.value));
+export const AddEventModal: React.FC<IEventModal> = ({
+  changeEventName, changeEventDay, changeEventMonth, addEvent, closeModalWindow, newEvent,
+}) => {
+  function onChangeEventName(e: React.FormEvent<HTMLInputElement>) {
+    changeEventName(e.currentTarget.value);
   }
 
-  function changeEventDay(e: React.FormEvent<HTMLInputElement>) {
-    dispatch(addNewEventDayActionCreator(e.currentTarget.value));
+  function onChangeEventDay(e: React.FormEvent<HTMLInputElement>) {
+    changeEventDay(e.currentTarget.value);
   }
 
-  function changeEventMonth(e: React.FormEvent<HTMLInputElement>) {
-    dispatch(addNewEventMonthActionCreator(e.currentTarget.value));
+  function onChangeEventMonth(e: React.FormEvent<HTMLInputElement>) {
+    changeEventMonth(e.currentTarget.value);
   }
 
-  function addEvent() {
-    return dispatch(addEventActionCreator());
+  function onAddEvent() {
+    return addEvent();
   }
 
-  function closeModalWindow(event: React.SyntheticEvent) {
-    if (event.target === event.currentTarget) return dispatch(closeModalActionCreator());
+  function onCloseModalWindow(event: React.SyntheticEvent) {
+    if (event.target === event.currentTarget) return closeModalWindow();
   }
 
   return (
-    <Overlay onClick={closeModalWindow}>
+    <Overlay onClick={onCloseModalWindow}>
       <Modal>
-        <Input id="eventName" type="text" placeholder="Event" onChange={changeEventName} value={newEvent.eventName} />
-        <Input id="eventDay" type="text" placeholder="Add day as DD" onChange={changeEventDay} value={newEvent.eventDay} />
-        <Input id="eventMonth" type="text" placeholder="Add month as MM" onChange={changeEventMonth} value={newEvent.eventMonth} />
-        <Button onClick={addEvent}> Add event </Button>
+        <Input id="eventName" type="text" placeholder="Event" onChange={onChangeEventName} value={newEvent.eventName} />
+        <Input id="eventDay" type="text" placeholder="Add day as DD" onChange={onChangeEventDay} value={newEvent.eventDay} />
+        <Input id="eventMonth" type="text" placeholder="Add month as MM" onChange={onChangeEventMonth} value={newEvent.eventMonth} />
+        <Button onClick={onAddEvent}> Add event </Button>
       </Modal>
     </Overlay>
   );

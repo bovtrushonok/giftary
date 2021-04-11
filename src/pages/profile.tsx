@@ -1,14 +1,15 @@
 import React from 'react';
 import { IProfileProps } from '../types';
+import { AddEventModalContainer, AddGiftModalContainer } from '../containers';
 import {
-  Header, BottomNav, SwitchComponent, MyEvent, MyGift, AddEventModal, AddGiftModal, OpenModalButton,
+  Header, BottomNav, SwitchComponent, MyEvent, MyGift, OpenModalButton,
 } from '../components';
 import {
   Wrapper, Content, List,
 } from '../sharedViews';
 
-const ProfilePage: React.FC<IProfileProps> = ({
-  events, gifts, mode, addMode, dispatch, newEvent, newGift,
+export const ProfilePage: React.FC<IProfileProps> = ({
+  events, gifts, mode, addMode, dispatch,
 }) => {
   const giftItems = gifts.map((g) => (
     <MyGift {...g} />
@@ -23,8 +24,8 @@ const ProfilePage: React.FC<IProfileProps> = ({
 
   return (
     <>
-      {addGiftMode && <AddGiftModal dispatch={dispatch} newGift={newGift} />}
-      {addEventMode && <AddEventModal dispatch={dispatch} newEvent={newEvent} />}
+      {addGiftMode && <AddGiftModalContainer />}
+      {addEventMode && <AddEventModalContainer />}
       {addMode === 'false' && (
       <Wrapper>
         <Content>
@@ -42,5 +43,3 @@ const ProfilePage: React.FC<IProfileProps> = ({
     </>
   );
 };
-
-export default ProfilePage;
