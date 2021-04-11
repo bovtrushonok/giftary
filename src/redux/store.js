@@ -1,9 +1,10 @@
-import { combineReducers, createStore } from 'redux';
-import { modalReducer, profileReducer } from './reducers';
+import { createStore, combineReducers } from 'redux';
+import { eventsReducer, friendsReducer, profileReducer } from './reducers';
 
 const reducers = combineReducers({
-  modalReducer,
-  profileReducer,
+  profilePage: profileReducer,
+  friendsPage: friendsReducer,
+  eventsPage: eventsReducer,
 });
 
 export const store = createStore(reducers);

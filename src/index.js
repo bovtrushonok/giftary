@@ -4,9 +4,10 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import { store } from './redux/data';
+import { store } from './redux/store';
 
 const reRenderTree = () => {
+  window.state = store.getState();
   ReactDOM.render(
     <React.StrictMode>
       <BrowserRouter>

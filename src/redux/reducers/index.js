@@ -1,7 +1,9 @@
-import { modalReducer } from './modalsReducers';
 import { profileReducer } from './profilePageReducers';
+import { eventsReducer } from './eventsPageReducers';
+import { friendsReducer } from './friendsPageReducers';
 
 export {
-  modalReducer,
   profileReducer,
+  eventsReducer,
+  friendsReducer,
 };

@@ -1,14 +1,16 @@
-import { profileReducer, modalReducer } from './reducers';
+/* import { profileReducer, modalReducer } from './reducers';
 
 export const store = {
   state: {
     eventsPage: {
       friendsEventsList: [
         {
-          friendName: 'good friend', friendAvatar: '🐞', eventName: 'First event', eventDay: '26', eventMonth: 'March', id: '0',
+          friendName: 'good friend', friendAvatar: '🐞', eventName: 'First event',
+          eventDay: '26', eventMonth: 'March', id: '0',
         },
         {
-          friendName: 'another friend', friendAvatar: '🐞', eventName: 'second event', eventDay: '26', eventMonth: 'April', id: '1',
+          friendName: 'another friend', friendAvatar: '🐞', eventName: 'second event',
+          eventDay: '26', eventMonth: 'April', id: '1',
         },
       ],
     },
@@ -24,10 +26,12 @@ export const store = {
       addMode: 'false',
       giftsData: [
         {
-          giftName: 'First gift', giftLink: 'some link', giftDescription: 'awesome present', id: '0',
+          giftName: 'First gift', giftLink: 'some link',
+          giftDescription: 'awesome present', id: '0',
         },
         {
-          giftName: 'Second gift', giftLink: 'another link', giftDescription: 'cool present', id: '1',
+          giftName: 'Second gift', giftLink: 'another link',
+          giftDescription: 'cool present', id: '1',
         },
       ],
       eventsData: [
@@ -65,3 +69,4 @@ export const store = {
     this.reRenderTree();
   },
 };
+*/

@@ -18,8 +18,8 @@ const ProfilePage: React.FC<IProfileProps> = ({
     <MyEvent {...item} />
   ));
 
-  const addGiftMode = addMode === 'true' && mode === 'onGift';
-  const addEventMode = addMode === 'true' && mode === 'onEvent';
+  const addGiftMode = addMode === 'true' && mode;
+  const addEventMode = addMode === 'true' && !mode;
 
   return (
     <>
@@ -31,8 +31,8 @@ const ProfilePage: React.FC<IProfileProps> = ({
           <Header />
           <SwitchComponent dispatch={dispatch} />
           <List>
-            {mode === 'onGift' && giftItems}
-            {mode === 'onEvent' && eventItems}
+            {mode && giftItems}
+            {!mode && eventItems}
             <OpenModalButton dispatch={dispatch} />
           </List>
         </Content>
