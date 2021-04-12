@@ -11,7 +11,7 @@ import {
 } from '../sharedViews';
 
 export const ProfilePage: React.FC<IProfileProps> = ({
-  events, gifts, mode, addMode, dispatch,
+  events, gifts, mode, addMode,
 }) => {
   const giftItems = gifts.map((g) => (
     <MyGift {...g} />
