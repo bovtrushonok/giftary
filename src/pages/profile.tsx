@@ -6,9 +6,7 @@ import {
 import {
   Header, BottomNav, MyEvent, MyGift,
 } from '../components';
-import {
-  Wrapper, Content, List,
-} from '../sharedViews';
+import { Wrapper, Content, List } from '../sharedViews';
 
 export const ProfilePage: React.FC<IProfileProps> = ({
   events, gifts, mode, addMode,
