@@ -4,7 +4,7 @@ import {
   addNewGiftLinkActionCreator, addNewGiftDescriptionActionCreator,
 } from './modals';
 import {
-  changeModeActionCreator, openModalActionCreator, closeModalActionCreator,
+  changeMode, openModal, closeModalActionCreator,
 } from './profile';
 
 export {
@@ -16,7 +16,7 @@ export {
   addNewGiftNameActionCreator,
   addNewGiftLinkActionCreator,
   addNewGiftDescriptionActionCreator,
-  changeModeActionCreator,
-  openModalActionCreator,
+  changeMode,
+  openModal,
   closeModalActionCreator,
 };
