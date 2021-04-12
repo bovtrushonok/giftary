@@ -9,6 +9,8 @@ export interface IProfileProps {
   newGift: IGiftProps;
 }
 
+type DispatchWithOutParameters = () => any;
+
 export interface ISwitcher {
-  dispatch: any;
+  changeMode: DispatchWithOutParameters;
 }

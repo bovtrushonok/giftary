@@ -22,5 +22,5 @@ export interface IEventModal {
 }
 
 export interface IOpenModal {
-  dispatch: any;
+  openModal: DispatchWithOutParameters;
 }

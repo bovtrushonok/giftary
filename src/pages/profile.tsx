@@ -1,8 +1,10 @@
 import React from 'react';
 import { IProfileProps } from '../types';
-import { AddEventModalContainer, AddGiftModalContainer } from '../containers';
 import {
-  Header, BottomNav, SwitchComponent, MyEvent, MyGift, OpenModalButton,
+  AddEventModalContainer, AddGiftModalContainer, OpenModalButtonContainer, SwitcherContainer,
+} from '../containers';
+import {
+  Header, BottomNav, MyEvent, MyGift,
 } from '../components';
 import {
   Wrapper, Content, List,
@@ -30,11 +32,11 @@ export const ProfilePage: React.FC<IProfileProps> = ({
       <Wrapper>
         <Content>
           <Header />
-          <SwitchComponent dispatch={dispatch} />
+          <SwitcherContainer />
           <List>
             {mode && giftItems}
             {!mode && eventItems}
-            <OpenModalButton dispatch={dispatch} />
+            <OpenModalButtonContainer />
           </List>
         </Content>
         <BottomNav />
