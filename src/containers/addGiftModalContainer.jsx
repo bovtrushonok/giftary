@@ -1,27 +1,12 @@
 import { connect } from 'react-redux';
-import {
-  addGiftActionCreator, addNewGiftNameActionCreator, addNewGiftLinkActionCreator,
-  addNewGiftDescriptionActionCreator, closeModalActionCreator,
-} from '../redux/actions';
+import { addGiftActionCreator, closeModalActionCreator } from '../redux/actions';
 import { AddGiftModal } from '../components';
-
-function mapStateToProps(state) {
-  return {
-    newGift: state.profilePage.newGiftData,
-  };
-}
 
 function mapDispatchToProps(dispatch) {
   return {
-    addGift: () => dispatch(addGiftActionCreator()),
-    changeGiftName: (value) => {
-      dispatch(addNewGiftNameActionCreator(value));
-    },
-    changeGiftLink(value) {
-      dispatch(addNewGiftLinkActionCreator(value));
-    },
-    changeGiftDescription(value) {
-      dispatch(addNewGiftDescriptionActionCreator(value));
+    addGift(giftName, giftLink, giftDescription) {
+      const newGift = { giftName, giftLink, giftDescription };
+      dispatch(addGiftActionCreator(newGift));
     },
     closeModalWindow() {
       dispatch(closeModalActionCreator());
@@ -29,4 +14,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export const AddGiftModalContainer = connect(mapStateToProps, mapDispatchToProps)(AddGiftModal);
+export const AddGiftModalContainer = connect(null, mapDispatchToProps)(AddGiftModal);

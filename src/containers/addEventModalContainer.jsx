@@ -1,29 +1,12 @@
 import { connect } from 'react-redux';
 import { AddEventModal } from '../components';
-import {
-  addEventActionCreator, addNewEventNameActionCreator, addNewEventDayActionCreator,
-  addNewEventMonthActionCreator, closeModalActionCreator,
-} from '../redux/actions';
-
-function mapStateToProps(state) {
-  return {
-    newEvent: state.profilePage.newEventData,
-  };
-}
+import { addEventActionCreator, closeModalActionCreator } from '../redux/actions';
 
 function mapDispatchToProps(dispatch) {
   return {
-    changeEventName: (value) => {
-      dispatch(addNewEventNameActionCreator(value));
-    },
-    changeEventDay: (value) => {
-      dispatch(addNewEventDayActionCreator(value));
-    },
-    changeEventMonth: (value) => {
-      dispatch(addNewEventMonthActionCreator(value));
-    },
-    addEvent() {
-      dispatch(addEventActionCreator());
+    addEvent(eventName, eventDay, eventMonth) {
+      const newEvent = { eventName, eventDay, eventMonth };
+      dispatch(addEventActionCreator(newEvent));
     },
     closeModalWindow: () => {
       dispatch(closeModalActionCreator());
@@ -31,4 +14,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export const AddEventModalContainer = connect(mapStateToProps, mapDispatchToProps)(AddEventModal);
+export const AddEventModalContainer = connect(null, mapDispatchToProps)(AddEventModal);

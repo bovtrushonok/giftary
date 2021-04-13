@@ -1,24 +1,16 @@
 import { IGiftProps, IEventProps } from './commons';
 
-type DispatchWithParameters = (p: string) => any;
+type DispatchWithParameters = (p1: string, p2: string, p3: string) => any;
 type DispatchWithOutParameters = () => any;
 
 export interface IGiftModal {
-  addGift: DispatchWithOutParameters,
-  changeGiftName: DispatchWithParameters,
-  changeGiftLink: DispatchWithParameters,
-  changeGiftDescription: DispatchWithParameters,
+  addGift: DispatchWithParameters,
   closeModalWindow: DispatchWithOutParameters,
-  newGift: IGiftProps;
 }
 
 export interface IEventModal {
-  changeEventName: DispatchWithParameters,
-  changeEventDay: DispatchWithParameters,
-  changeEventMonth: DispatchWithParameters,
-  addEvent: DispatchWithOutParameters,
+  addEvent: DispatchWithParameters,
   closeModalWindow: DispatchWithOutParameters,
-  newEvent: IEventProps;
 }
 
 export interface IOpenModal {

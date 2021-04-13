@@ -1,7 +1,5 @@
 import {
-  addEventActionCreator, addNewEventNameActionCreator, addNewEventDayActionCreator,
-  addNewEventMonthActionCreator, addGiftActionCreator, addNewGiftNameActionCreator,
-  addNewGiftLinkActionCreator, addNewGiftDescriptionActionCreator,
+  addEventActionCreator, addGiftActionCreator,
 } from './modals';
 import {
   changeMode, openModal, closeModalActionCreator,
@@ -9,13 +7,7 @@ import {
 
 export {
   addEventActionCreator,
-  addNewEventNameActionCreator,
-  addNewEventDayActionCreator,
-  addNewEventMonthActionCreator,
   addGiftActionCreator,
-  addNewGiftNameActionCreator,
-  addNewGiftLinkActionCreator,
-  addNewGiftDescriptionActionCreator,
   changeMode,
   openModal,
   closeModalActionCreator,

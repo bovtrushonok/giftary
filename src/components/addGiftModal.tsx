@@ -1,26 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IGiftModal } from '../types';
 import {
   Modal, Button, TextArea, Input, InputBlock, Overlay,
 } from '../sharedViews';
 
-export const AddGiftModal: React.FC<IGiftModal> = ({
-  addGift, changeGiftName, changeGiftLink, changeGiftDescription, closeModalWindow, newGift,
-}) => {
+export const AddGiftModal: React.FC<IGiftModal> = ({ addGift, closeModalWindow }) => {
+  const [giftName, setGiftName] = useState('');
+  const [giftLink, setGiftLink] = useState('');
+  const [giftDescription, setGiftDescription] = useState('');
+
   function onAddGift() {
-    addGift();
+    addGift(giftName, giftLink, giftDescription);
   }
 
   function onChangeGiftName(e: React.FormEvent<HTMLInputElement>) {
-    changeGiftName(e.currentTarget.value);
+    setGiftName(e.currentTarget.value);
   }
 
   function onChangeGiftLink(e: React.FormEvent<HTMLInputElement>) {
-    changeGiftLink(e.currentTarget.value);
+    setGiftLink(e.currentTarget.value);
   }
 
   function onChangeGiftDescription(e: React.FormEvent<HTMLTextAreaElement>) {
-    changeGiftDescription(e.currentTarget.value);
+    setGiftDescription(e.currentTarget.value);
   }
 
   function onCloseModalWindow(event: React.SyntheticEvent) {
@@ -31,10 +33,10 @@ export const AddGiftModal: React.FC<IGiftModal> = ({
     <Overlay onClick={onCloseModalWindow}>
       <Modal>
         <InputBlock modal>
-          <Input id="giftName" type="text" placeholder="Gift" value={newGift.giftName} onChange={onChangeGiftName} />
-          <Input id="giftLink" type="text" placeholder="Link" value={newGift.giftLink} onChange={onChangeGiftLink} />
+          <Input id="giftName" type="text" placeholder="Gift" value={giftName} onChange={onChangeGiftName} />
+          <Input id="giftLink" type="text" placeholder="Link" value={giftLink} onChange={onChangeGiftLink} />
         </InputBlock>
-        <TextArea placeholder="Description" value={newGift.giftDescription} onChange={onChangeGiftDescription} />
+        <TextArea placeholder="Description" value={giftDescription} onChange={onChangeGiftDescription} />
         <Button onClick={onAddGift}>Add gift</Button>
       </Modal>
     </Overlay>
