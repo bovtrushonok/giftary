@@ -1,15 +1,11 @@
 import React from 'react';
 import { IMyGiftsProps, IGiftProps } from '../types';
-import { MyGift } from '.';
+import { MyGift } from './myGift';
 
-export const Gifts: React.FC<IMyGiftsProps> = ({ gifts, editItem, deleteItem }) => {
-  const giftItems = gifts.map((g: IGiftProps) => (
-    <MyGift {...g} editItem={editItem} deleteItem={deleteItem} key={g.id} />
-  ));
-
-  return (
-    <>
-      {giftItems}
-    </>
-  );
-};
+export const Gifts: React.FC<IMyGiftsProps> = ({ gifts }) => (
+  <>
+    {
+      gifts.map((g: IGiftProps) => <MyGift {...g} key={g.id} />)
+    }
+  </>
+);

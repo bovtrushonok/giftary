@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 import { ProfilePage } from '../pages/profile';
 
-function mapStateToProps(state) {
+function mapStateToProps({ profilePage }) {
   return {
-    gifts: state.profilePage.giftsData,
-    events: state.profilePage.eventsData,
-    mode: state.profilePage.mode,
-    addMode: state.profilePage.addMode,
+    gifts: profilePage.giftsData,
+    events: profilePage.eventsData,
+    mode: profilePage.mode,
+    addMode: profilePage.addMode,
   };
 }
 

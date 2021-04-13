@@ -22,8 +22,7 @@ export const ProfilePage: React.FC<IProfileProps> = ({ mode, addMode }) => {
           <Header />
           <SwitcherContainer />
           <List>
-            {mode && <GiftsContainer />}
-            {!mode && <EventsContainer />}
+            {mode ? <GiftsContainer /> : <EventsContainer />}
             <OpenModalButtonContainer />
           </List>
         </Content>
