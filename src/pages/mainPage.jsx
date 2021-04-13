@@ -1,17 +1,13 @@
-import { BottomNav } from '../components/bottomNav';
-import { Header } from '../components/header';
-import { Content } from '../sharedViews/contentWrap';
-import { Wrapper } from '../sharedViews/wrapper';
+import { BottomNav, Header } from '../components';
+import { Content, Wrapper } from '../sharedViews';
 
 const MainPage = () => (
-  <>
-    <Wrapper>
-      <Content>
-        <Header />
-        <BottomNav />
-      </Content>
-    </Wrapper>
-  </>
+  <Wrapper>
+    <Content>
+      <Header />
+      <BottomNav />
+    </Content>
+  </Wrapper>
 );
 
 export default MainPage;

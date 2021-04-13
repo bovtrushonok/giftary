@@ -1,36 +1,27 @@
-import { NavLink } from 'react-router-dom';
-import * as path from '../constants/routePaths.ts';
-import { MenuWrapper, linkActiveStyle, linkStyle } from '../sharedViews/header';
+import * as path from '../constants/routePaths';
+import { MenuWrapper, StyledHeaderLink } from '../sharedViews';
 
 export const Header = () => (
   <MenuWrapper>
-    <NavLink
+    <StyledHeaderLink
       to={path.mainPagePath}
-      style={linkStyle}
-      activeStyle={linkActiveStyle}
     >
       Main
-    </NavLink>
-    <NavLink
+    </StyledHeaderLink>
+    <StyledHeaderLink
       to={path.profilePath}
-      style={linkStyle}
-      activeStyle={linkActiveStyle}
     >
       Profile
-    </NavLink>
-    <NavLink
+    </StyledHeaderLink>
+    <StyledHeaderLink
       to={path.eventsPagePath}
-      style={linkStyle}
-      activeStyle={linkActiveStyle}
     >
       Events
-    </NavLink>
-    <NavLink
+    </StyledHeaderLink>
+    <StyledHeaderLink
       to={path.friendsPagePath}
-      style={linkStyle}
-      activeStyle={linkActiveStyle}
     >
       Friends
-    </NavLink>
+    </StyledHeaderLink>
   </MenuWrapper>
 );

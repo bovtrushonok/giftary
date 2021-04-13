@@ -1,7 +1,7 @@
-import { LogInForm } from './authForm';
+import { Form } from './form';
 
 const AuthorizationPage = () => (
-  <LogInForm />
+  <Form />
 );
 
 export default AuthorizationPage;

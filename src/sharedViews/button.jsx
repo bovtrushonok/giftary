@@ -10,7 +10,7 @@ export const Button = styled.button`
   text-transform: capitalize;
   font-family: Tahoma, sans-serif;
   font-size: 1.1em;
-  background-color: ${(props) => props.bcColor || 'transparent'};
+  background-color: transparent;
   &:active,
   &:focus {
     outline: ${color.mainShadows} 0.5px solid;
@@ -19,4 +19,16 @@ export const Button = styled.button`
   &:hover {
     cursor: pointer;
   }
+
+  ${(props) => props.secondary && `
+    background-color: ${color.secondaryBc};
+  `}
+  
+  ${(props) => props.secondaryLight && `
+    background-color: ${color.secondaryLightBc};
+  `}
+
+  ${(props) => props.link && `
+    width: auto;
+  `}
 `;

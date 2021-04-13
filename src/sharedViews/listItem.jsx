@@ -4,7 +4,8 @@ import * as color from '../constants/colors.ts';
 const ListItem = styled.div`
   display: flex;
   flex-flow: row nowrap;
-  justify-items: space-between;
+  justify-content: space-between;
+  align-content: center;
   align-items: center;
   width: 100%;
   margin: 7px auto;
@@ -13,30 +14,20 @@ const ListItem = styled.div`
   background-color: ${color.primaryBc};
 `;
 
-const GiftListItem = styled(ListItem)`
-  div {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-items: space-between;
-  }
-
-  div > div {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
-    justify-items: space-around;
-  }
+const GiftWrapper = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  justify-items: space-around;
   
   span {
     font-size: 17px;
-    color: ${color.secondaryDText};
+    color: ${color.secondaryDarkenText};
   }
 
   span + span {
     font-size: 13px;
-    color: ${color.secondaryLText};
+    color: ${color.secondaryLightText};
   }
 
   span:last-child {
@@ -45,58 +36,55 @@ const GiftListItem = styled(ListItem)`
   }
 `;
 
+const GiftListItem = styled(ListItem)`
+`;
+
 const FriendGiftListItem = styled(GiftListItem)`
-  input {
-    display: flex;
-    justify-self: flex-end;
-    width: 10%;
-    height: 20px;
+  justify-content: space-between;
+`;
+
+const DateBlock = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  justify-self: flex-end;
+  alignn-self: center;
+  align-content: center;
+  justify-items: flex-end;
+  width: 40%;
+
+  p {
+    font-size: 25px;
+    color: ${color.accentRedText};
+    margin: 0;
+    padding: 0;
+  }
+
+  p + p {
+    font-size: 15px;
+    color: ${color.accentRedText};
   }
 `;
 
 const EventListItem = styled(ListItem)`
-  div {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
+  flex-flow: row wrap;
 
   span {
     font-size: 19px;
-    color: ${color.secondaryDText};
+    color: ${color.secondaryDarkenText};
     width: 50%;
   }
 
   div + p {
     display: flex;
-    align-self: flex-start;
+    justify-self: flex-start;
     font-size: 15px;
-    color: ${color.secondaryLText};
+    color: ${color.secondaryLightText};
     padding: 0;
     margin: 0;
-  }
-
-  div > div {
-    display: flex;
-    flex-flow: column wrap;
-    justify-self: flex-end;
-    align-items: flex-end;
-    width: 50%;
-  }
-
-  div > div > span {
-    font-size: 17px;
-    color: ${color.accentRedText};
-  }
-
-  div > div > span + span {
-    font-size: 15px;
-    color: ${color.accentRedText};
+    width: 30%;
   }
 `;
 
 export {
-  ListItem, GiftListItem, EventListItem, FriendGiftListItem,
+  ListItem, GiftListItem, GiftWrapper, EventListItem, DateBlock, FriendGiftListItem,
 };
