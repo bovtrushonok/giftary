@@ -4,9 +4,8 @@ import { addEventActionCreator, closeModalActionCreator } from '../redux/actions
 
 function mapDispatchToProps(dispatch) {
   return {
-    addEvent(eventName, eventDay, eventMonth) {
-      const newEvent = { eventName, eventDay, eventMonth };
-      dispatch(addEventActionCreator(newEvent));
+    addEvent(newEventData) {
+      dispatch(addEventActionCreator(newEventData));
     },
     closeModalWindow: () => {
       dispatch(closeModalActionCreator());

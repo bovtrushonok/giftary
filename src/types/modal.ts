@@ -1,6 +1,6 @@
 import { IGiftProps, IEventProps } from './commons';
 
-type DispatchWithParameters = (p1: string, p2: string, p3: string) => any;
+type DispatchWithParameters = (p: object) => any;
 type DispatchWithOutParameters = () => any;
 
 export interface IGiftModal {

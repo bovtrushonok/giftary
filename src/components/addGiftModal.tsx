@@ -10,7 +10,7 @@ export const AddGiftModal: React.FC<IGiftModal> = ({ addGift, closeModalWindow }
   const [giftDescription, setGiftDescription] = useState('');
 
   function onAddGift() {
-    addGift(giftName, giftLink, giftDescription);
+    addGift({ giftName, giftLink, giftDescription });
   }
 
   function onChangeGiftName(e: React.FormEvent<HTMLInputElement>) {

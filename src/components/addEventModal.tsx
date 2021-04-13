@@ -22,7 +22,7 @@ export const AddEventModal: React.FC<IEventModal> = ({ addEvent, closeModalWindo
   }
 
   function onAddEvent() {
-    return addEvent(eventName, eventDay, eventMonth);
+    return addEvent({ eventName, eventDay, eventMonth });
   }
 
   function onCloseModalWindow(event: React.SyntheticEvent) {

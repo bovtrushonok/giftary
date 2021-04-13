@@ -4,9 +4,8 @@ import { AddGiftModal } from '../components';
 
 function mapDispatchToProps(dispatch) {
   return {
-    addGift(giftName, giftLink, giftDescription) {
-      const newGift = { giftName, giftLink, giftDescription };
-      dispatch(addGiftActionCreator(newGift));
+    addGift(newGiftData) {
+      dispatch(addGiftActionCreator(newGiftData));
     },
     closeModalWindow() {
       dispatch(closeModalActionCreator());
