@@ -5,6 +5,8 @@ import { AddEventModalContainer } from './addEventModalContainer';
 import { AddGiftModalContainer } from './addGiftModalContainer';
 import { SwitcherContainer } from './switcherContainer';
 import { OpenModalButtonContainer } from './openModalButtonContainer';
+import { GiftsContainer } from './giftsContainer';
+import { EventsContainer } from './eventsContainer';
 
 export {
   FriendsPageContainer,
@@ -14,4 +16,6 @@ export {
   AddGiftModalContainer,
   SwitcherContainer,
   OpenModalButtonContainer,
+  GiftsContainer,
+  EventsContainer,
 };

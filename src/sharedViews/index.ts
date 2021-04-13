@@ -19,6 +19,7 @@ import { List } from './list';
 import { IconWrapper } from './profileIconWrapper';
 import { InputCheckbox } from './checkbox';
 import { Label } from './inputLabel';
+import { EditingPanel } from './editPanel';
 
 export {
   Wrapper,
@@ -43,4 +44,5 @@ export {
   IconWrapper,
   InputCheckbox,
   Label,
+  EditingPanel,
 };

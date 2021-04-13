@@ -1,5 +1,5 @@
 import {
-  CHANGE_MODE, OPEN_MODAL, CLOSE_MODAL,
+  CHANGE_MODE, OPEN_MODAL, CLOSE_MODAL, EDIT_ITEM, DELETE_ITEM,
 } from '../../constants/actionCreatorTypes';
 
 export const changeMode = () => ({
@@ -12,4 +12,14 @@ export const openModal = () => ({
 
 export const closeModalActionCreator = () => ({
   type: CLOSE_MODAL,
+});
+
+export const editItem = (itemID) => ({
+  type: EDIT_ITEM,
+  itemID,
+});
+
+export const deleteItem = (itemID) => ({
+  type: DELETE_ITEM,
+  itemID,
 });
