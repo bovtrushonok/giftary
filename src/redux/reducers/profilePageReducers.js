@@ -39,13 +39,11 @@ export const profileReducer = (state = initialState, action) => {
       stateCopy.addMode = 'false';
       return stateCopy;
     case ADD_EVENT:
-      stateCopy.eventsData = { ...state.eventsData };
-      stateCopy.eventsData.push(...action.newEvent);
+      stateCopy.eventsData.push(action.newEvent);
       stateCopy.addMode = 'false';
       return stateCopy;
     case ADD_GIFT:
-      stateCopy.giftsData = { ...state.giftsData };
-      stateCopy.giftsData.push(...action.newGift);
+      stateCopy.giftsData.push(action.newGift);
       stateCopy.addMode = 'false';
       return stateCopy;
     default:
