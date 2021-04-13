@@ -2,7 +2,7 @@ import {
   addEventActionCreator, addGiftActionCreator,
 } from './modals';
 import {
-  changeMode, openModal, closeModalActionCreator,
+  changeMode, openModal, closeModalActionCreator, editItem, deleteItem,
 } from './profile';
 
 export {
@@ -11,4 +11,5 @@ export {
   changeMode,
   openModal,
   closeModalActionCreator,
+  editItem, deleteItem,
 };

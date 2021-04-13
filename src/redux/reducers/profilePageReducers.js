@@ -1,6 +1,6 @@
 import {
   CHANGE_MODE, OPEN_MODAL, CLOSE_MODAL,
-  ADD_GIFT, ADD_EVENT,
+  ADD_GIFT, ADD_EVENT, EDIT_ITEM, DELETE_ITEM,
 } from '../../constants/actionCreatorTypes';
 
 const initialState = {
@@ -45,6 +45,21 @@ export const profileReducer = (state = initialState, action) => {
     case ADD_GIFT:
       stateCopy.giftsData.push(action.newGift);
       stateCopy.addMode = 'false';
+      return stateCopy;
+    case EDIT_ITEM:
+      return stateCopy;
+    case DELETE_ITEM:
+      if (stateCopy.mode) {
+        stateCopy.giftsData = [...stateCopy.giftsData];
+        stateCopy.giftsData.map((gift, index) => {
+          if (gift.id === action.itemID) stateCopy.giftsData.splice(index, 1);
+        });
+      } else {
+        stateCopy.eventsData = [...stateCopy.eventsData];
+        stateCopy.eventsData.map((event, index) => {
+          if (event.id === action.itemID) stateCopy.eventsData.splice(index, 1);
+        });
+      }
       return stateCopy;
     default:
       return state;
