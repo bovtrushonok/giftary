@@ -16,3 +16,15 @@ export interface IEventModal {
 export interface IOpenModal {
   openModal: DispatchWithOutParameters;
 }
+
+export interface IInitStateGifts {
+  giftName: string;
+  giftLink: string;
+  giftDescription: string;
+}
+
+export interface IInitStateEvents {
+  eventName: string;
+  eventDay: string;
+  eventMonth: string;
+}

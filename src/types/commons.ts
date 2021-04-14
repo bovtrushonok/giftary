@@ -40,3 +40,8 @@ export interface IFriendGiftProps {
   giftDescription: string;
   id: string;
 }
+
+export interface IModalAction {
+  id: string,
+  value: string;
+}
