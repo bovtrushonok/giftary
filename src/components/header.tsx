@@ -1,7 +1,8 @@
+import React from 'react';
 import * as path from '../constants/routePaths';
 import { MenuWrapper, StyledHeaderLink } from '../sharedViews';
 
-export const Header = () => (
+export const Header: React.FC = () => (
   <MenuWrapper>
     <StyledHeaderLink
       to={path.mainPagePath}
