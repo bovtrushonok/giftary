@@ -1,39 +1,29 @@
 import React from 'react';
 import { IProfileProps } from '../types';
 import {
-  Header, BottomNav, SwitchComponent, MyEvent, MyGift, AddEventModal, AddGiftModal, OpenModalButton,
-} from '../components';
-import {
-  Wrapper, Content, List,
-} from '../sharedViews';
+  AddEventModalContainer, AddGiftModalContainer, EventsContainer,
+  OpenModalButtonContainer, SwitcherContainer,
+} from '../containers';
+import { Header, BottomNav } from '../components';
+import { Wrapper, Content, List } from '../sharedViews';
+import { GiftsContainer } from '../containers/giftsContainer';
 
-const ProfilePage: React.FC<IProfileProps> = ({
-  events, gifts, mode, addMode, dispatch, newEvent, newGift,
-}) => {
-  const giftItems = gifts.map((g) => (
-    <MyGift {...g} />
-  ));
-
-  const eventItems = events.map((item) => (
-    <MyEvent {...item} />
-  ));
-
-  const addGiftMode = addMode === 'true' && mode === 'onGift';
-  const addEventMode = addMode === 'true' && mode === 'onEvent';
+export const ProfilePage: React.FC<IProfileProps> = ({ mode, addMode }) => {
+  const addGiftMode = addMode === 'true' && mode;
+  const addEventMode = addMode === 'true' && !mode;
 
   return (
     <>
-      {addGiftMode && <AddGiftModal dispatch={dispatch} newGift={newGift} />}
-      {addEventMode && <AddEventModal dispatch={dispatch} newEvent={newEvent} />}
+      {addGiftMode && <AddGiftModalContainer />}
+      {addEventMode && <AddEventModalContainer />}
       {addMode === 'false' && (
       <Wrapper>
         <Content>
           <Header />
-          <SwitchComponent dispatch={dispatch} />
+          <SwitcherContainer />
           <List>
-            {mode === 'onGift' && giftItems}
-            {mode === 'onEvent' && eventItems}
-            <OpenModalButton dispatch={dispatch} />
+            {mode ? <GiftsContainer /> : <EventsContainer />}
+            <OpenModalButtonContainer />
           </List>
         </Content>
         <BottomNav />
@@ -42,5 +32,3 @@ const ProfilePage: React.FC<IProfileProps> = ({
     </>
   );
 };
-
-export default ProfilePage;

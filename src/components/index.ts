@@ -12,6 +12,8 @@ import { SignupForm } from './signupForm';
 import { FriendGift } from './friendGift';
 import { OpenModalButton } from './openModalButton';
 import { FormInput } from './formLabeledInput';
+import { Gifts } from './myGifts';
+import { Events } from './myEvents';
 
 export {
   Header,
@@ -28,4 +30,6 @@ export {
   FriendGift,
   OpenModalButton,
   FormInput,
+  Gifts,
+  Events,
 };

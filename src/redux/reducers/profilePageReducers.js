@@ -1,10 +1,11 @@
 import {
   CHANGE_MODE, OPEN_MODAL, CLOSE_MODAL,
+  ADD_GIFT, ADD_EVENT, EDIT_ITEM, DELETE_ITEM,
 } from '../../constants/actionCreatorTypes';
 
 const initialState = {
   userId: 0,
-  mode: 'onGift', // or onEvent
+  mode: true,
   addMode: 'false',
   giftsData: [
     {
@@ -22,12 +23,6 @@ const initialState = {
       eventName: 'Second event', eventDay: '26', eventMonth: 'April', id: '1',
     },
   ],
-  newGiftData: {
-    giftName: '', giftLink: '', giftDescription: '', id: '5',
-  },
-  newEventData: {
-    eventName: '', eventDay: '', eventMonth: '', id: '5',
-  },
 };
 
 export const profileReducer = (state = initialState, action) => {
@@ -35,13 +30,36 @@ export const profileReducer = (state = initialState, action) => {
 
   switch (action.type) {
     case CHANGE_MODE:
-      stateCopy.mode = (stateCopy.mode === 'onGift') ? 'onEvent' : 'onGift';
+      stateCopy.mode = !stateCopy.mode;
       return stateCopy;
     case OPEN_MODAL:
       stateCopy.addMode = 'true';
       return stateCopy;
     case CLOSE_MODAL:
       stateCopy.addMode = 'false';
+      return stateCopy;
+    case ADD_EVENT:
+      stateCopy.eventsData.push(action.newEvent);
+      stateCopy.addMode = 'false';
+      return stateCopy;
+    case ADD_GIFT:
+      stateCopy.giftsData.push(action.newGift);
+      stateCopy.addMode = 'false';
+      return stateCopy;
+    case EDIT_ITEM:
+      return stateCopy;
+    case DELETE_ITEM:
+      if (stateCopy.mode) {
+        stateCopy.giftsData = [...stateCopy.giftsData];
+        stateCopy.giftsData.map((gift, index) => {
+          if (gift.id === action.itemID) stateCopy.giftsData.splice(index, 1);
+        });
+      } else {
+        stateCopy.eventsData = [...stateCopy.eventsData];
+        stateCopy.eventsData.map((event, index) => {
+          if (event.id === action.itemID) stateCopy.eventsData.splice(index, 1);
+        });
+      }
       return stateCopy;
     default:
       return state;

@@ -1,10 +1,11 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { FormInput } from '.';
 import {
   InputBlock, ButtonBlock, Button,
 } from '../sharedViews';
 
-export const LoginForm = () => (
+export const LoginForm: React.FC = () => (
   <>
     <InputBlock>
       <FormInput label id="login" type="text" placeholder="Login" />

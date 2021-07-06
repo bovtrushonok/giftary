@@ -1,22 +1,15 @@
 import {
-  addEventActionCreator, addNewEventNameActionCreator, addNewEventDayActionCreator,
-  addNewEventMonthActionCreator, addGiftActionCreator, addNewGiftNameActionCreator,
-  addNewGiftLinkActionCreator, addNewGiftDescriptionActionCreator,
+  addEventActionCreator, addGiftActionCreator,
 } from './modals';
 import {
-  changeModeActionCreator, openModalActionCreator, closeModalActionCreator,
+  changeMode, openModal, closeModalActionCreator, editItem, deleteItem,
 } from './profile';
 
 export {
   addEventActionCreator,
-  addNewEventNameActionCreator,
-  addNewEventDayActionCreator,
-  addNewEventMonthActionCreator,
   addGiftActionCreator,
-  addNewGiftNameActionCreator,
-  addNewGiftLinkActionCreator,
-  addNewGiftDescriptionActionCreator,
-  changeModeActionCreator,
-  openModalActionCreator,
+  changeMode,
+  openModal,
   closeModalActionCreator,
+  editItem, deleteItem,
 };

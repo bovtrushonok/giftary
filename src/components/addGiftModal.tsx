@@ -1,41 +1,46 @@
-import React from 'react';
-import { IGiftModal } from '../types';
-import {
-  addGiftActionCreator, addNewGiftNameActionCreator, addNewGiftLinkActionCreator,
-  addNewGiftDescriptionActionCreator, closeModalActionCreator,
-} from '../redux/actions';
+import React, { useReducer } from 'react';
+import { IGiftModal, IInitStateGifts, IModalAction } from '../types';
 import {
   Modal, Button, TextArea, Input, InputBlock, Overlay,
 } from '../sharedViews';
 
-export const AddGiftModal: React.FC<IGiftModal> = ({ dispatch, newGift }) => {
-  const addGift = () => dispatch(addGiftActionCreator());
+const initialState: IInitStateGifts = {
+  giftName: '',
+  giftLink: '',
+  giftDescription: '',
+};
 
-  function changeGiftName(e: React.FormEvent<HTMLInputElement>) {
-    dispatch(addNewGiftNameActionCreator(e.currentTarget.value));
+function reducer(state: IInitStateGifts, action: IModalAction) {
+  return {
+    ...state,
+    [action.id]: action.value,
+  };
+}
+
+export const AddGiftModal: React.FC<IGiftModal> = ({ addGift, closeModalWindow }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  function onAddGift() {
+    addGift(state);
   }
 
-  function changeGiftLink(e: React.FormEvent<HTMLInputElement>) {
-    dispatch(addNewGiftLinkActionCreator(e.currentTarget.value));
+  function handleChange(e: React.FormEvent<HTMLInputElement>|React.FormEvent<HTMLTextAreaElement>) {
+    return dispatch({ id: e.currentTarget.id, value: e.currentTarget.value });
   }
 
-  function changeGiftDescription(e: React.FormEvent<HTMLTextAreaElement>) {
-    dispatch(addNewGiftDescriptionActionCreator(e.currentTarget.value));
-  }
-
-  function closeModalWindow(event: React.SyntheticEvent) {
-    if (event.target === event.currentTarget) return dispatch(closeModalActionCreator());
+  function onCloseModalWindow(event: React.SyntheticEvent) {
+    if (event.target === event.currentTarget) return closeModalWindow();
   }
 
   return (
-    <Overlay onClick={closeModalWindow}>
+    <Overlay onClick={onCloseModalWindow}>
       <Modal>
         <InputBlock modal>
-          <Input id="giftName" type="text" placeholder="Gift" value={newGift.giftName} onChange={changeGiftName} />
-          <Input id="giftLink" type="text" placeholder="Link" value={newGift.giftLink} onChange={changeGiftLink} />
+          <Input id="giftName" type="text" placeholder="Gift" value={state.giftName} onChange={handleChange} />
+          <Input id="giftLink" type="text" placeholder="Link" value={state.giftLink} onChange={handleChange} />
         </InputBlock>
-        <TextArea placeholder="Description" value={newGift.giftDescription} onChange={changeGiftDescription} />
-        <Button onClick={addGift}>Add gift</Button>
+        <TextArea placeholder="Description" id="giftDescription" value={state.giftDescription} onChange={handleChange} />
+        <Button onClick={onAddGift}>Add gift</Button>
       </Modal>
     </Overlay>
   );

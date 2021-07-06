@@ -15,6 +15,7 @@ const ListItem = styled.div`
 `;
 
 const GiftWrapper = styled.div`
+  min-width: 60%;
   display: flex;
   flex-flow: column wrap;
   align-content: flex-start;
@@ -37,6 +38,11 @@ const GiftWrapper = styled.div`
 `;
 
 const GiftListItem = styled(ListItem)`
+  &:hover {
+    svg {
+      display: inline-block;
+    }
+  }
 `;
 
 const FriendGiftListItem = styled(GiftListItem)`
@@ -82,6 +88,12 @@ const EventListItem = styled(ListItem)`
     padding: 0;
     margin: 0;
     width: 30%;
+  }
+
+  &:hover {
+    svg {
+      display: inline-block;
+    }
   }
 `;
 

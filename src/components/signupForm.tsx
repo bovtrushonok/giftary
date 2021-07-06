@@ -1,10 +1,11 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FormInput } from '.';
 import {
   InputBlock, ButtonBlock, Button,
 } from '../sharedViews';
 
-export const SignupForm = () => (
+export const SignupForm: React.FC = () => (
   <>
     <InputBlock>
       <FormInput id="email" type="text" placeholder="Email" label />

@@ -1,16 +1,15 @@
 import React from 'react';
-import { changeModeActionCreator } from '../redux/actions';
 import { ISwitcher } from '../types';
 import { Switch, Slider, InputCheckbox } from '../sharedViews';
 
-export const SwitchComponent: React.FC<ISwitcher> = ({ dispatch }) => {
-  function changeMode() {
-    dispatch(changeModeActionCreator());
+export const SwitchComponent: React.FC<ISwitcher> = ({ changeMode }) => {
+  function onChangeMode() {
+    changeMode();
   }
 
   return (
     <Switch>
-      <InputCheckbox onChange={changeMode} />
+      <InputCheckbox onChange={onChangeMode} />
       <Slider />
       <span>My gifts &#127873;</span>
       <span>My events &#127881;</span>

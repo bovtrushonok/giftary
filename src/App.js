@@ -1,13 +1,11 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import * as path from './constants/routePaths';
-import ProfilePage from './pages/profile';
+import { EventsPageContainer, FriendsPageContainer, ProfilePageContainer } from './containers';
 import AuthorizationPage from './pages/auth/authPage';
-import EventListPage from './pages/eventsList';
-import FriendsList from './pages/friendsList';
 import MainPage from './pages/mainPage';
 
-const App = ({ state, dispatch }) => {
+const App = () => {
   const isAuthenticated = true;
   if (isAuthenticated) {
     return (
@@ -16,32 +14,20 @@ const App = ({ state, dispatch }) => {
         <Route
           path={path.profilePath}
           render={() => (
-            <ProfilePage
-              gifts={state.profilePage.giftsData}
-              events={state.profilePage.eventsData}
-              mode={state.profilePage.mode}
-              newEvent={state.profilePage.newEventData}
-              newGift={state.profilePage.newGiftData}
-              addMode={state.profilePage.addMode}
-              dispatch={dispatch}
-            />
+            <ProfilePageContainer />
           )}
         />
         <Redirect exact from={path.defaultPath} to={path.profilePath} />
         <Route
           path={path.eventsPagePath}
           render={() => (
-            <EventListPage
-              friendEvents={state.eventsPage.friendsEventsList}
-            />
+            <EventsPageContainer />
           )}
         />
         <Route
           path={path.friendsPagePath}
           render={() => (
-            <FriendsList
-              friends={state.friendsPage.friendsData}
-            />
+            <FriendsPageContainer />
           )}
         />
       </>
